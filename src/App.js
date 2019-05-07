@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Space X
+          Few changes
         </a>
       </header>
     </div>
