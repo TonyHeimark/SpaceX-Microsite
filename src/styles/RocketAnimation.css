@@ -8,7 +8,6 @@
     display: block;
   }
   
-  
   .st0{fill:#F47B01;}
       .st1{fill:#FEC829;}
       .st2{fill:#F8EE78;}
@@ -23,9 +22,10 @@
     height: auto;
   }
   
-  .sticky, .sticky2 {
+  .sticky {
     height: 100vh;
-    background: linear-gradient(#403A3E, #BE5869);
+    background: url("../images/space.jpg");
+    background-size: cover;
     width: 100%;
     overflow: hidden;
     }
