@@ -58,7 +58,7 @@ const RocketAnimation = () => (
               >
                 <Tween
                     from={{ x: '200px', width: "200px", y: "1500%"}}
-                    to={{ x: '100px', width: "400px", y: "750%"}}
+                    to={{ x: '100px', width: "400px", y: "700%"}}
                 />
               </Timeline>
             </div>
