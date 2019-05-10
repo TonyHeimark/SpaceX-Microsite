@@ -1,6 +1,6 @@
 import React from 'react';
-import Spinner from "./Spinner";
 import "../styles/FutureMissions.css";
+import Spinner from "./Spinner.js";
 
 export default class App extends React.Component{
 
@@ -8,7 +8,7 @@ export default class App extends React.Component{
         super(props)
 
         this.state={
-            upcoming: [],
+            past: [],
             details: "",
             loading: true
         }
@@ -17,18 +17,21 @@ export default class App extends React.Component{
     }
 
     componentWillMount(){
-        fetch('https://api.spacexdata.com/v3/launches/upcoming')
+        fetch('https://api.spacexdata.com/v3/launches/past')
         .then((response) => {
             return response.json();
         })
         .then((data) => {
-            const upcoming = data;
+            const past = data;
 
             this.setState(()=>({
-                upcoming: upcoming,
-                loading: false
+                past: past,
+                loading: false,
             }));
+
+            console.log(past);
         });
+
     }
 
     handleViewDetails(e) {
@@ -46,7 +49,7 @@ export default class App extends React.Component{
 
     render(){
         
-        const jsx = this.state.upcoming.map((launch) => {
+        const jsx = this.state.past.map((launch) => {
 
             const launchTime = new Date(launch.launch_date_unix*1000);
             const launchDate = launchTime.toString().substring(0,33);
@@ -57,7 +60,7 @@ export default class App extends React.Component{
                         <h3>{launch.mission_name}</h3>
                         <p>{launchDate}</p>
                         <button onClick={this.handleViewDetails}>{this.state.details === launch.mission_name ? "Hide Details" : "View Details"}</button>
-                        {launch.links.video_link ? <button><a target="_blank" href={launch.links.video_link}>Watch Stream</a></button> : undefined}
+                        {launch.links.video_link ? <button><a target="_blank" href={launch.links.video_link}>Watch Video</a></button> : undefined}
                     </div>
                     <div className={this.state.details === launch.mission_name ? "visible" : "hidden"}>
                         <span>Details:</span>
