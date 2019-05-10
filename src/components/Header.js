@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const Header = () => (
     <header className="header">
         <div className="header_inner">
-            <img className="logo" src={require("../images/spacex_logo_white.png")} />
+            <img className="logo" src={require("../images/spacex_logo_white.png")} alt="SpaceX logo" />
         <nav className="nav">
             <NavLink to="/" className="nav_link" activeClassName="is-active" exact={true}>Home</NavLink>
             <NavLink to="/previous-launches" className="nav_link" activeClassName="is-active">Previous Launches</NavLink>

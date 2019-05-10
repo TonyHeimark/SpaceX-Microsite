@@ -1,0 +1,13 @@
+
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+    height: 0px;
+}
+
+.visible{
+    visibility: visible;
+    opacity: 1;
+    transition: .3s ease-in-out;
+    height: auto;
+}

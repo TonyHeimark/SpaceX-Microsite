@@ -29,3 +29,7 @@
     width: 100%;
     overflow: hidden;
     }
+
+  .newsletter_container h2{
+    font-size: 6rem;
+  }

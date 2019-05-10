@@ -1,5 +1,5 @@
 import React from 'react';
-import "../styles/FutureMissions.css";
+import "../styles/Missions.css";
 import { CircleSpinner } from "react-spinners-kit";
 
 export default class App extends React.Component{

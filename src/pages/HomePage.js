@@ -9,7 +9,7 @@ const HomePage = () => (
             <NextMission />
         </div>
         <div className="Section2">
-        
+            
         </div>
         <RocketAnimation />
         <div className="Section2">

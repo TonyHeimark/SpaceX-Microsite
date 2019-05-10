@@ -7,11 +7,14 @@
 .next_mission__title{
     font-size: 4rem;
     margin-top: 300px;
+    font-weight: 300;
+    text-transform: uppercase;
 }
 
 .next_mission__launch{
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 300;
+    text-transform: uppercase;
 }
 
 .next_mission__countdown{
@@ -28,6 +31,18 @@
     max-width: 600px;
     margin: 30px auto 20px;
     min-height: 300px;
+}
+
+.next_mission__p--hidden{
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+.next_mission__p{
+    visibility: visible;
+    opacity: 1;
+    transition: .3s ease-in-out;
 }
 
 
