@@ -1,0 +1,44 @@
+.header{
+    background-color: transparent;
+    height: 40px;
+    padding: 20px;
+    margin-bottom: -80px;
+}
+
+.header_inner{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.logo{
+    margin-top: 7px;
+}
+
+.nav{
+    height: 100%;
+    text-align: right;
+    margin-top: 15px;
+}
+
+.nav_link{
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.8rem;
+    font-weight: 400;
+    border-bottom: 2px solid transparent;
+    line-height: 5px;
+}
+
+.nav_link:hover{
+    border-bottom: 2px solid white;
+    line-height: 5px;
+    transition: .3s ease-in-out;
+}
+
+.is-active{
+    border-bottom: 2px solid white;
+    line-height: 5px;
+}

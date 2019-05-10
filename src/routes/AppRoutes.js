@@ -6,10 +6,12 @@ import HomePage from "../components/HomePage";
 import LaunchSitePage from "../components/LaunchSitePage";
 import NotFoundPage from "../components/NotFoundPage";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
+import "../styles/App.css";
 
 const AppRouter = ()=> (
     <BrowserRouter>
-    <div>
+    <div className="App">
         <Header />
         <Switch>
             <Route path="/" component={HomePage} exact={true} />
@@ -18,6 +20,7 @@ const AppRouter = ()=> (
             <Route path="/launch-sites" component={LaunchSitePage} />
             <Route component={NotFoundPage} />
         </Switch>
+        <Footer/>
     </div>
     </BrowserRouter>
 );

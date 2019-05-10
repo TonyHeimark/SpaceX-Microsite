@@ -1,6 +1,5 @@
 import React from 'react';
-import "../styles/Home.css";
-import moment from 'moment'
+import "../styles/NextMission.css";
 import Countdown from 'react-countdown-now';
 
 
@@ -51,14 +50,14 @@ export default class App extends React.Component{
     render(){
         let nextLaunch = this.state.nextLaunch*1000;
         let launch = new Date(nextLaunch);
-        const endDate = moment(launch);
         return(
-            <div>
-                <h1>Mission Name: {this.state.missionName}</h1>
-                <p>Launches in: {<Countdown date={endDate} />}</p>
-                <button onClick={this.handleDescription}>{!this.state.buttonClicked ? "Learn more about this mission" : "Close details"}</button>
-                <div>
-                    {this.state.buttonClicked ? <p>{this.state.description}</p> : undefined}
+            <div className="next_mission">
+                <h1 className="next_mission__title">Mission Name: {this.state.missionName}</h1>
+                <span className="next_mission__launch">Launch in:</span>
+                <span className="next_mission__countdown">{<Countdown date={launch} />}</span>
+                <button className="next_mission__button button" onClick={this.handleDescription}>{!this.state.buttonClicked ? "Learn more about this mission" : "Close details"}</button>
+                <div className="next_mission__description">
+                    {this.state.buttonClicked ? <p className="next_mission__p">{this.state.description}</p> : undefined}
                 </div>
             </div>
         )}

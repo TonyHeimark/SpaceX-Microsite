@@ -1,0 +1,33 @@
+.next_mission{
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.next_mission__title{
+    font-size: 4rem;
+    margin-top: 300px;
+}
+
+.next_mission__launch{
+    font-size: 4rem;
+    font-weight: 300;
+}
+
+.next_mission__countdown{
+    font-size: 6rem;
+    display: block;
+}
+
+.next_mission__button{
+    margin-top: 50px;
+}
+
+.next_mission__description{
+    font-size: 1.6rem;
+    max-width: 600px;
+    margin: 30px auto 20px;
+    min-height: 300px;
+}
+
+

@@ -1,0 +1,13 @@
+.hero{
+    height: 60vh;
+    width: 100%;
+    background: url("../images/fallingStar.jpg");
+    background-size: cover;
+    display: grid;
+    place-content: center;
+}
+
+.hero__title{
+    font-size: 6rem;
+    font-weight: 400;
+}

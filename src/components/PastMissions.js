@@ -1,6 +1,6 @@
 import React from 'react';
 import "../styles/FutureMissions.css";
-import Spinner from "./Spinner.js";
+import { CircleSpinner } from "react-spinners-kit";
 
 export default class App extends React.Component{
 
@@ -51,27 +51,31 @@ export default class App extends React.Component{
         
         const jsx = this.state.past.map((launch) => {
 
+            const launchName = launch.mission_name;
             const launchTime = new Date(launch.launch_date_unix*1000);
             const launchDate = launchTime.toString().substring(0,33);
+            const launchVideo = launch.links.video_link;
+            const launchRocket = launch.rocket.rocket_name;
+            const launchSite = launch.launch_site.site_name_long;
 
             return (
-                <div key={launch.mission_name}>
+                <div key={launchName}>
                     <div>
-                        <h3>{launch.mission_name}</h3>
+                        <h3>{launchName}</h3>
                         <p>{launchDate}</p>
-                        <button onClick={this.handleViewDetails}>{this.state.details === launch.mission_name ? "Hide Details" : "View Details"}</button>
-                        {launch.links.video_link ? <button><a target="_blank" href={launch.links.video_link}>Watch Video</a></button> : undefined}
+                        <button onClick={this.handleViewDetails}>{this.state.details === launchName ? "Hide Details" : "View Details"}</button>
+                        {launchVideo ? <button><a target="_blank" rel="noopener noreferrer" href={launchVideo}>Watch Video</a></button> : undefined}
                     </div>
-                    <div className={this.state.details === launch.mission_name ? "visible" : "hidden"}>
+                    <div className={this.state.details === launchName ? "visible" : "hidden"}>
                         <span>Details:</span>
                         <p>{launch.details ? launch.details : "No details to show at this time."}</p>
                         <span>Rocket:</span>
-                        <p>{launch.rocket.rocket_name ? launch.rocket.rocket_name : "No machine to show at this time."}</p>
+                        <p>{launchRocket ? launchRocket : "No machine to show at this time."}</p>
                         <span>Launch site:</span>
-                        <p>{launch.launch_site.site_name_long ? launch.launch_site.site_name_long : "No launch site to show at this time."}</p>
+                        <p>{launchSite ? launchSite : "No launch site to show at this time."}</p>
                         <span>Payload:</span>
                         {
-                            launch.rocket.rocket_name
+                            launchRocket
                             ?
                             <div>
                                 {launch.rocket.second_stage.payloads.map((payload) => {
@@ -96,7 +100,16 @@ export default class App extends React.Component{
 
         return(
             <div>
-                {this.state.loading ? <Spinner /> : jsx}
+                {this.state.loading 
+                ?
+                    <CircleSpinner
+                    size={30}
+                    color="#ffffff"
+                    loading={this.state.loading}
+                /> 
+                :
+                    jsx
+                }
             </div>
         )}
 }
