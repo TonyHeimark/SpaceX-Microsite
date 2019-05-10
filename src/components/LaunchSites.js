@@ -1,5 +1,4 @@
 import React from "react";
-import Hero from "./Hero";
 import { CircleSpinner } from "react-spinners-kit";
 
 export default class App extends React.Component{
@@ -64,7 +63,6 @@ export default class App extends React.Component{
 
         return(
             <div>
-                <Hero title="Launch Sites" />
                 {this.state.loading 
                 ?
                     <CircleSpinner

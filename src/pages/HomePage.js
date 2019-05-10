@@ -1,6 +1,6 @@
 import React from "react";
-import NextMission from "./NextMission";
-import RocketAnimation from "./RocketAnimation";
+import NextMission from "../components/NextMission";
+import RocketAnimation from "../components/RocketAnimation";
 import "../styles/HomePage.css";
 
 const HomePage = () => (

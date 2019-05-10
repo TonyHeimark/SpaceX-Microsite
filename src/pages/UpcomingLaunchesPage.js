@@ -1,6 +1,6 @@
 import React from "react";
-import Hero from "./Hero";
-import FutureMissions from "./FutureMissions";
+import Hero from "../components/Hero";
+import FutureMissions from "../components/FutureMissions";
 
 const UpcomingLaunchesPage = () => (
     <div>
