@@ -1,9 +1,10 @@
 import React from 'react';
 import "../styles/App.css";
 import NextMission from "./NextMission";
+import FuturePage from "./FuturePage";
 import RocketAnimation from './RocketAnimation';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
       <NextMission />
@@ -12,8 +13,9 @@ function App() {
       </div>
       <RocketAnimation />
       <div className="Section2">
-      
+
       </div>
+      <FuturePage />
     </div>
   );
 }
