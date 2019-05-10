@@ -18,7 +18,7 @@ const RocketAnimation = () => (
           <div className="sticky"> 
             <Timeline totalProgress={progress} paused>
               <Tween
-                  from={{x: "20%",  width: '200px', y: '60%' }}
+                  from={{x: "20%",  width: '200px', y: '220%' }}
                   to={{x: "20%", width: '200px', y: '-230%'}}
               >
               <div className="rocket-container">
@@ -37,8 +37,8 @@ const RocketAnimation = () => (
               }
             >
               <Tween
-                  from={{ x: '90%', width: "100px", y: "175%" }}
-                  to={{ x: '90%', width: "100px", y: "-1500px"}}
+                  from={{ x: '90%', width: "100px", y: "705%" }}
+                  to={{ x: '90%', width: "100px", y: "-2400px"}}
               />
             </Timeline>
 
@@ -52,8 +52,8 @@ const RocketAnimation = () => (
               }
             >
               <Tween
-                  from={{ x: '200%', width: "600px", y: "-20vh"}}
-                  to={{ x: '100%', width: "600px", y: "-30vh"}}
+                  from={{ x: '200%', width: "90%", y: "-40vh"}}
+                  to={{ x: '0%', width: "90%", y: "-82vh"}}
               />
             </Timeline>
           </div>
