@@ -1,0 +1,21 @@
+.footer{
+    height: 100px;
+    padding: 20px;
+}
+
+.footer_inner{
+    display: grid;
+    grid-template-columns: auto auto;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer_social__container{
+    font-size: 1.8rem;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.footer_copyright__container{
+    font-size: 1.4rem;
+}
