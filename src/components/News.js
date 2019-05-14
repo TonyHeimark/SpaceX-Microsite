@@ -8,14 +8,18 @@ export default class App extends React.Component{
         super(props)
 
         this.state={
-            news: undefined,
-            news2: undefined,
+            news: {},
+            news2: {},
+            article1: "",
+            article2: "",
+            details1: "",
+            details2: "",
             loading: true
         }
     }
 
     componentWillMount(){
-        fetch('https://api.spacexdata.com/v3/history/1,2')
+        fetch('https://api.spacexdata.com/v3/history/16')
         .then((response) => {
             return response.json();
         })
@@ -23,12 +27,12 @@ export default class App extends React.Component{
             const news = data
 
             this.setState(()=>({
-                news: news
+                news: news,
+                details1: news.details.substring(0, 200) + "...",
+                article1: news.links.article
             }));
 
-            console.log(news);
-
-            fetch('https://api.spacexdata.com/v3/history/2')
+            fetch('https://api.spacexdata.com/v3/history/18')
                 .then((response) => {
                     return response.json();
                 })
@@ -37,24 +41,33 @@ export default class App extends React.Component{
 
                     this.setState(()=>({
                         news2: news2,
+                        details2: news2.details.substring(0, 200) + "...",
+                        article2: news2.links.article,
                         loading: false,
                     }));
-
-                    console.log(news2);
             });
         });
 
     }
 
     render(){
-        
-        const jsx = <div>
+        const newsOne = <div className="news_box">
+                            <a target="_blank" rel="noopener noreferrer" href={this.state.article1}><img className="news_image" src="https://mk0spaceflightnoa02a.kinstacdn.com/wp-content/uploads/2017/03/WVWS_SES-10-9474.jpg" alt="falcon9 rocket launch" /></a>
+                            <h3 className="news_box_title">{this.state.news.title}</h3>
+                            <p className="news_box_details">{this.state.details1}</p>
+                            <a target="_blank" rel="noopener noreferrer" href={this.state.article1}><button className="button news_box_button">Go to article</button></a>
+                        </div>
 
-                    </div>
+        const newsTwo = <div className="news_box">
+                            <a target="_blank" rel="noopener noreferrer" href={this.state.article1}><img className="news_image" src="https://mk0spaceflightnoa02a.kinstacdn.com/wp-content/uploads/2018/02/40126461411_a6e49a61f2_k.jpg" alt="falcon heavy rocket launch" /></a>
+                            <h3 className="news_box_title">{this.state.news2.title}</h3>
+                            <p className="news_box_details">{this.state.details2}</p>
+                            <a target="_blank" rel="noopener noreferrer" href={this.state.article2}><button className="button news_box_button">Go to article</button></a>
+                        </div>
         
 
         return(
-            <div>
+            <div className="news_section">
                 {this.state.loading 
                 ?
                     <CircleSpinner
@@ -63,7 +76,10 @@ export default class App extends React.Component{
                     loading={this.state.loading}
                 /> 
                 :
-                    jsx
+                    <div className="news">
+                        {newsOne}
+                        {newsTwo}
+                    </div>
                 }
             </div>
         )}

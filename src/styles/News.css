@@ -1,0 +1,34 @@
+.news{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(350px, 1fr) );
+}
+
+.news_image{
+    width: 100%;
+    object-fit: cover;
+}
+
+.news_box{
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 100px;
+    background-color: #0a0a0a;
+    border-bottom: 2px solid white;
+}
+
+.news_box_title{
+    font-size: 2.6rem;
+    margin: 5px 0 0;
+}
+
+.news_box_details{
+    font-size: 1.6rem;
+}
+
+.news_box_button{
+    margin: 10px 0 10px;
+}
+
+.news_box_button a{
+    text-decoration: none;
+}

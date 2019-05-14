@@ -30,7 +30,7 @@ html, body{
     color: white;
     border: 2px solid white;
     background-color: transparent;
-    padding: 15px 20px;
+    padding: 10px 20px;
     border-radius: 4px;
 
 }
@@ -41,3 +41,4 @@ html, body{
     transition: .3s ease-in-out;
     cursor: pointer;
 }
+
