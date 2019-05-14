@@ -8,7 +8,8 @@ export default class App extends React.Component{
 
         this.state={
             validation: undefined,
-            messageClass: "newsletter_message"
+            messageClass: "newsletter_message",
+            inputClass: "newsletter_input"
         }
 
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -20,7 +21,8 @@ export default class App extends React.Component{
         if(this.state.validation !== undefined){
             this.setState(() => ({
                 validation: undefined,
-                messageClass: "newsletter_message"
+                messageClass: "newsletter_message",
+                inputClass: "newsletter_input"
             }))
         } 
     }
@@ -33,18 +35,21 @@ export default class App extends React.Component{
             if (regex.test(e.target.parentElement.children[3].value)){
                 this.setState(() => ({
                     validation: <span>Welcome on board!</span>,
-                    messageClass: "newsletter_message newsletter_message--success"
+                    messageClass: "newsletter_message newsletter_message--success",
+                    inputClass: "newsletter_input newsletter_input--success"
                 }))
             } else {
                 this.setState(() => ({
                     validation: <span>Your Email is NOT valid</span>,
-                    messageClass: "newsletter_message newsletter_message--error"
+                    messageClass: "newsletter_message newsletter_message--error",
+                    inputClass: "newsletter_input newsletter_input--error"
                 }))
             }
         } else {
             this.setState(() => ({
                 validation: <span>Please fill in your Email.</span>,
-                messageClass: "newsletter_message newsletter_message--error"
+                messageClass: "newsletter_message newsletter_message--error",
+                inputClass: "newsletter_input newsletter_input--error"
             }))
         }
     }
@@ -61,7 +66,7 @@ export default class App extends React.Component{
                 <h2 className="newsletter_title">Subscribe to our Newsletter</h2>
                 <p className="newsletter_paragraph">If you want to stay up to date with our launches and our exciting plans for the future. Sign up now!</p>
                 <span className={this.state.messageClass}>{this.state.validation}</span>
-                <input onKeyDown={this.handleKeyDown} onInput={this.handleInput} className="newsletter_input" type="text" placeholder="JaneDoe@gmail.com" />
+                <input onKeyDown={this.handleKeyDown} onInput={this.handleInput} className={this.state.inputClass} type="text" placeholder="JaneDoe@gmail.com" />
                 <button onClick={this.handleSubmit} className="button newsletter_button">Submit</button>
             </div>
         )

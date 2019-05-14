@@ -14,7 +14,7 @@
 
 .newsletter_paragraph{
     font-size: 1.8rem;
-    width: 50%;
+    width: 300px;
     margin: 0 auto;
 }
 
@@ -39,10 +39,20 @@
 
 .newsletter_message--success{
     color: lightgreen;
+    border-color: lightgreen;
 }
 
 .newsletter_message--error{
     color: lightcoral;
+    border-color: lightcoral;
+}
+
+.newsletter_input--success{
+    border-color: lightgreen;
+}
+
+.newsletter_input--error{
+    border-color: lightcoral;
 }
 
 
