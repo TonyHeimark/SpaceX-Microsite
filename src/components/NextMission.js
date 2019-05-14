@@ -24,6 +24,7 @@ export default class App extends React.Component{
             return response.json();
         })
         .then((data) => {
+            console.log(data)
             let missionName = data.mission_name;
             let launch = data.launch_date_unix;
             let description = data.details;
