@@ -35,7 +35,7 @@ export default class App extends React.Component{
         return(
             <header className="header">
                 <div className="header_inner">
-                    <img className="logo" src={require("../images/spacex_logo_white.png")} alt="SpaceX logo" />
+                    <a href="/"><img className="logo" src={require("../images/spacex_logo_white.png")} alt="SpaceX logo" /></a>
                 <div onClick={this.handleHamburger} className={ this.state.navStyle === "nav nav-show" ? "change hamburger" : "hamburger"}>
                     <div className="bar1"></div>
                     <div className="bar2"></div>
