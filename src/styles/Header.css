@@ -16,6 +16,10 @@
     padding: 20px;
 }
 
+.logo_link{
+    width: 220px;
+}
+
 /* Navigation */
 
 .nav{
@@ -49,12 +53,13 @@
 .hamburger{
     display: none;
     right: 0;
-    padding: 30px;
+    margin: 20px;
+    padding: 10px;
     position: fixed;
     z-index: 10;
     cursor: pointer;
+    border-radius: 4px;
     background-color: #4E2929;
-    border-radius: 0 0 0 4px;
 }
   
 .bar1, .bar2, .bar3{
@@ -99,6 +104,7 @@
         background-color: rgba(0, 0, 0, 0.98);
         text-align: center;
         margin: 0;
+        padding: 100px 0 0 0;
         z-index: 9;
     }
 

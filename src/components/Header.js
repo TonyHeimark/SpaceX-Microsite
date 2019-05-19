@@ -32,10 +32,11 @@ export default class App extends React.Component{
     }
         
     render(){ 
+
         return(
             <header className="header">
                 <div className="header_inner">
-                    <Link to="/"><img className="logo" src={require("../images/spacex_logo_white.png")} alt="SpaceX logo" /></Link>
+                    <Link className="logo_link" to="/"><img className="logo" src={require("../images/spacex_logo_white.png")} alt="SpaceX logo" /></Link>
                 <div onClick={this.handleHamburger} className={ this.state.navStyle === "nav nav-show" ? "change hamburger" : "hamburger"}>
                     <div className="bar1"></div>
                     <div className="bar2"></div>
