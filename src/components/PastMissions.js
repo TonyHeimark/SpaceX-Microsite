@@ -25,7 +25,7 @@ export default class App extends React.Component{
             const past = data;
 
             this.setState(()=>({
-                past: past,
+                past: past.reverse(),
                 loading: false,
             }));
 

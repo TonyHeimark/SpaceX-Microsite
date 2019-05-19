@@ -1,5 +1,6 @@
 import React from "react";
 import { CircleSpinner } from "react-spinners-kit";
+import "../styles/LaunchSites.css";
 
 export default class App extends React.Component{
 
@@ -35,22 +36,23 @@ export default class App extends React.Component{
         const jsx = this.state.site.map((site) => {
 
             return (
-                <div key={site.id}>
+                <div key={site.id} className="launch_site_container">
 
-                    <div>
-                        <h3>{site.location.name}</h3>
-                        <span>Location: {site.location.region}</span>
-                        <span>Status: {site.status}</span>
-                        <span>Launches: {site.attempted_launches}</span>
+                    <div className="launch_site_box">
+                        <h3 className="launch_site_box__title">{site.location.name}</h3>
+                        <span>Location:</span>
+                        <p>{site.location.region}</p>
+                        <span>Status:</span>
+                        <p>{site.status}</p>
+                        <span>Launches:</span>
+                        <p>{site.attempted_launches}</p>
                         <span>Details:</span>
                         <p>{site.details}</p>
-                        <button><a target="_blank" rel="noopener noreferrer" href={site.wikipedia}>Read more on Wikipedia</a></button>
+                        <a target="_blank" rel="noopener noreferrer" href={site.wikipedia}><button className="button">Read more on Wikipedia</button></a>
                     </div>
                     
-                    <iframe 
+                    <iframe className="launch_site__map"
                         title={site.location.name}
-                        width="600"
-                        height="500"
                         src={`https://maps.google.com/maps?q=${site.location.latitude}%2C%20${site.location.longitude}&t=k&z=9&ie=UTF8&iwloc=&output=embed`}
                         frameBorder="0"
                         scrolling="no"
