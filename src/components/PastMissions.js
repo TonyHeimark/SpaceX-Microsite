@@ -65,7 +65,7 @@ export default class App extends React.Component{
                         <p className="launch_date">{launchDate}</p>
                         <button className="button launch_button" onClick={this.handleViewDetails}>{this.state.details === launchName ? "Hide Details" : "View Details"}</button>
                         {launchVideo ? <a target="_blank" rel="noopener noreferrer" href={launchVideo}><button className="button launch_button">Watch Stream</button></a> : undefined}
-                        <div className={this.state.details === launchName ? "visible launch_details_box" : "hidden"}>
+                        <div className={this.state.details === launchName ? "visible launch_details_box" : "fade-Out hidden"}>
                             <div>
                                 <span className="launch_details_box__subtitle" >Details:</span>
                                 <p className="launch_details_box__content" >{launch.details ? launch.details : "No details to show at this time."}</p>

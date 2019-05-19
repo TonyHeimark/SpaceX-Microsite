@@ -49,10 +49,12 @@
 .hamburger{
     display: none;
     right: 0;
-    margin: 30px;
+    padding: 30px;
     position: fixed;
     z-index: 10;
     cursor: pointer;
+    background-color: #4E2929;
+    border-radius: 0 0 0 4px;
 }
   
 .bar1, .bar2, .bar3{

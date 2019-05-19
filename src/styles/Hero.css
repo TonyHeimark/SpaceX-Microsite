@@ -11,4 +11,17 @@
     font-size: 6rem;
     font-weight: 400;
     text-transform: uppercase;
+    text-align: center;
+}
+
+@media (max-width: 1025px){
+    .hero__title{
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 768px){
+    .hero__title{
+        font-size: 4rem;
+    }
 }
