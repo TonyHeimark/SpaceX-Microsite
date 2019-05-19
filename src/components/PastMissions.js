@@ -64,7 +64,7 @@ export default class App extends React.Component{
                         <h3>{launchName}</h3>
                         <p>{launchDate}</p>
                         <button onClick={this.handleViewDetails}>{this.state.details === launchName ? "Hide Details" : "View Details"}</button>
-                        {launchVideo ? <button><a target="_blank" rel="noopener noreferrer" href={launchVideo}>Watch Video</a></button> : undefined}
+                        {launchVideo ? <a target="_blank" rel="noopener noreferrer" href={launchVideo}><button>Watch Video</button></a> : undefined}
                     </div>
                     <div className={this.state.details === launchName ? "visible" : "hidden"}>
                         <span>Details:</span>

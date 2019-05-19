@@ -11,11 +11,11 @@ const HomePage = () => (
             <NextMission />
         </div>
         <div className="section1">
-            <Newsletter />
+            <News />
         </div>
         <RocketAnimation />
         <div className="section2">
-            <News />
+            <Newsletter />
         </div>
     </div>
 );

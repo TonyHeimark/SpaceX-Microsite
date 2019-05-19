@@ -23,6 +23,7 @@ export default class App extends React.Component{
         })
         .then((data) => {
             const upcoming = data;
+            console.log(data)
 
             this.setState(()=>({
                 upcoming: upcoming,
@@ -61,7 +62,7 @@ export default class App extends React.Component{
                         <h3>{launchName}</h3>
                         <p>{launchDate}</p>
                         <button onClick={this.handleViewDetails}>{this.state.details === launchName ? "Hide Details" : "View Details"}</button>
-                        {launchVideo ? <button><a target="_blank" rel="noopener noreferrer" href={launchVideo}>Watch Stream</a></button> : undefined}
+                        {launchVideo ? <a target="_blank" rel="noopener noreferrer" href={launchVideo}><button>Watch Stream</button></a> : undefined}
                     </div>
                     <div className={this.state.details === launchName ? "visible" : "hidden"}>
                         <span>Details:</span>
@@ -101,7 +102,7 @@ export default class App extends React.Component{
                 ?
                     <CircleSpinner
                     size={30}
-                    color="#0a0a0a"
+                    color="#ffffff"
                     loading={this.state.loading}
                 /> 
                 :

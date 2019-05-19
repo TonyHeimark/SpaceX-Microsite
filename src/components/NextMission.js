@@ -12,6 +12,7 @@ export default class App extends React.Component{
             nextLaunch: [],
             missionName: "Unknown",
             description: "",
+            link: undefined,
             buttonClicked: false,
         }
 
@@ -25,14 +26,15 @@ export default class App extends React.Component{
         })
         .then((data) => {
             console.log(data)
+            let streamLink = data.links.video_link;
             let missionName = data.mission_name;
             let launch = data.launch_date_unix;
             let description = data.details;
-            console.log(launch);
             this.setState(()=>({
                 nextLaunch: [launch],
                 missionName: missionName,
                 description: description,
+                link: streamLink
 
             }))
         });
@@ -52,11 +54,15 @@ export default class App extends React.Component{
     render(){
         let nextLaunch = this.state.nextLaunch*1000;
         let launch = new Date(nextLaunch);
+        if (Date.now() > nextLaunch){
+            launch = undefined
+        }
         return(
             <div className="next_mission">
                 <h1 className="next_mission__title">{this.state.missionName}</h1>
-                <span className="next_mission__launch">Launch:</span>
-                <span className="next_mission__countdown">{<Countdown date={Date.now() + 86400000} />}</span>
+                {launch ? <span className="next_mission__launch">Launch:</span> : undefined}
+                <span className="next_mission__countdown">{launch ? <Countdown date={launch} /> : "Recently Launched"}</span>
+                {this.state.link ? <a href={this.state.link} target="_blank" rel="noopener noreferrer"><button className="next_mission__button button">Watch Stream</button></a> : undefined}
                 <button className="next_mission__button button" onClick={this.handleDescription}>{!this.state.buttonClicked ? "Learn more about this mission" : "Close details"}</button>
                 <div className="next_mission__description">
                     {this.state.buttonClicked ? <p className="next_mission__p">{this.state.description}</p> : <p className="next_mission__p--hidden">{this.state.description}</p>}
