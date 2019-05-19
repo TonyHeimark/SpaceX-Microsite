@@ -10,4 +10,5 @@
 .hero__title{
     font-size: 6rem;
     font-weight: 400;
+    text-transform: uppercase;
 }

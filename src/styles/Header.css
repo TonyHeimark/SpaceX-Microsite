@@ -1,8 +1,7 @@
 .header{
     background-color: transparent;
     height: 40px;
-    padding: 20px;
-    margin-bottom: -80px;
+    margin-bottom: -40px;
 }
 
 .header_inner{
@@ -23,6 +22,7 @@
     height: 100%;
     text-align: right;
     margin-top: 15px;
+    padding: 20px;
 }
 
 .nav_link{
