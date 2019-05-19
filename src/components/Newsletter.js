@@ -40,14 +40,14 @@ export default class App extends React.Component{
                 }))
             } else {
                 this.setState(() => ({
-                    validation: <span>Your Email is NOT valid</span>,
+                    validation: <span>Your email is not valid</span>,
                     messageClass: "newsletter_message newsletter_message--error",
                     inputClass: "newsletter_input newsletter_input--error"
                 }))
             }
         } else {
             this.setState(() => ({
-                validation: <span>Please fill in your Email.</span>,
+                validation: <span>Please fill in your email.</span>,
                 messageClass: "newsletter_message newsletter_message--error",
                 inputClass: "newsletter_input newsletter_input--error"
             }))
