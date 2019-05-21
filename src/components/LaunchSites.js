@@ -39,16 +39,17 @@ export default class App extends React.Component{
                 <div key={site.id} className="launch_site_container">
 
                     <div className="launch_site_box">
-                        <h3 className="launch_site_box__title">{site.location.name}</h3>
-                        <span>Location:</span>
-                        <p>{site.location.region}</p>
-                        <span>Status:</span>
-                        <p>{site.status}</p>
-                        <span>Launches:</span>
-                        <p>{site.attempted_launches}</p>
-                        <span>Details:</span>
-                        <p>{site.details}</p>
-                        <a target="_blank" rel="noopener noreferrer" href={site.wikipedia}><button className="button">Read more on Wikipedia</button></a>
+                        <h3 className="launch_site_box__title">{site.site_name_long}</h3>
+                        <div className="launch_site_box__inner">
+                            <p><span>Location:</span>{site.location.region}</p>
+                            <p><span>Status:</span>{site.status}</p>
+                            <p><span>Launches:</span>{site.attempted_launches}</p>
+                        </div>
+                        <div className="launch_site_box__details">
+                            <span>Details</span>
+                            <p>{site.details}</p>
+                        </div>
+                        <a target="_blank" rel="noopener noreferrer" href={site.wikipedia}><button className="button launch_site_box__button">Read more on Wikipedia</button></a>
                     </div>
                     
                     <iframe className="launch_site__map"
@@ -67,11 +68,13 @@ export default class App extends React.Component{
             <div>
                 {this.state.loading 
                 ?
-                    <CircleSpinner
-                    size={30}
-                    color="#ffffff"
-                    loading={this.state.loading}
-                /> 
+                    <div className="loading_spinner">
+                        <CircleSpinner
+                            size={40}
+                            color="#ffffff"
+                            loading={this.state.loading}
+                        /> 
+                    </div>
                 :
                     jsx
                 }

@@ -6,8 +6,3 @@
     display: grid;
     place-content: center;
 }
-
-.section1, .section2{
-    height: auto;
-    padding: 100px 0;
-}

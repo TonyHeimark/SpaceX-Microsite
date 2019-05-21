@@ -1,5 +1,6 @@
 import React from 'react';
 import "../styles/NextMission.css";
+import { CircleSpinner } from "react-spinners-kit";
 import Countdown from 'react-countdown-now';
 
 
@@ -14,6 +15,7 @@ export default class App extends React.Component{
             description: "",
             link: undefined,
             buttonClicked: false,
+            loading: true
         }
 
         this.handleDescription = this.handleDescription.bind(this)
@@ -34,7 +36,8 @@ export default class App extends React.Component{
                 nextLaunch: [launch],
                 missionName: missionName,
                 description: description,
-                link: streamLink
+                link: streamLink,
+                loading: false,
 
             }))
         });
@@ -57,7 +60,8 @@ export default class App extends React.Component{
         if (Date.now() > nextLaunch){
             launch = undefined
         }
-        return(
+
+        const jsx = (
             <div className="next_mission">
                 <h1 className="next_mission__title">{this.state.missionName}</h1>
                 {launch ? <span className="next_mission__launch">Launch:</span> : undefined}
@@ -68,5 +72,23 @@ export default class App extends React.Component{
                     {this.state.buttonClicked ? <p className="next_mission__p">{this.state.description}</p> : <p className="next_mission__p--hidden">{this.state.description}</p>}
                 </div>
             </div>
-        )}
+        )
+
+        return (
+            <div>
+                {this.state.loading 
+                ?
+                    <div className="loading_spinner loading_spinner--noMargin">
+                        <CircleSpinner
+                            size={40}
+                            color="#ffffff"
+                            loading={this.state.loading}
+                        /> 
+                    </div>
+                :
+                    jsx
+                }
+            </div>
+        )
+    }
 }

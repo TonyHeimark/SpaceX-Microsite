@@ -59,7 +59,7 @@ export default class App extends React.Component{
                         </div>
 
         const newsTwo = <div className="news_box">
-                            <a className="news_box_link_image" target="_blank" rel="noopener noreferrer" href={this.state.article1}><img className="news_image" src="https://mk0spaceflightnoa02a.kinstacdn.com/wp-content/uploads/2018/02/40126461411_a6e49a61f2_k.jpg" alt="falcon heavy rocket launch" /></a>
+                            <a className="news_box_link_image" target="_blank" rel="noopener noreferrer" href={this.state.article2}><img className="news_image" src="https://mk0spaceflightnoa02a.kinstacdn.com/wp-content/uploads/2018/02/40126461411_a6e49a61f2_k.jpg" alt="falcon heavy rocket launch" /></a>
                             <h3 className="news_box_title">{this.state.news2.title}</h3>
                             <p className="news_box_details">{this.state.details2}</p>
                             <a target="_blank" rel="noopener noreferrer" href={this.state.article2}><button className="button news_box_button">Go to article</button></a>
@@ -70,11 +70,13 @@ export default class App extends React.Component{
             <div className="news_section">
                 {this.state.loading 
                 ?
-                    <CircleSpinner
-                    size={30}
-                    color="#ffffff"
-                    loading={this.state.loading}
-                /> 
+                    <div className="loading_spinner">
+                        <CircleSpinner
+                            size={40}
+                            color="#ffffff"
+                            loading={this.state.loading}
+                        /> 
+                    </div>
                 :
                     <div className="news">
                         {newsOne}

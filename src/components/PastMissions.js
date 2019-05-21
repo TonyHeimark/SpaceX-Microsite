@@ -53,7 +53,7 @@ export default class App extends React.Component{
 
             const launchName = launch.mission_name;
             const launchTime = new Date(launch.launch_date_unix*1000);
-            const launchDate = launchTime.toString().substring(0,33);
+            const launchDate = launchTime.toString().substring(0,16);
             const launchVideo = launch.links.video_link;
             const launchRocket = launch.rocket.rocket_name;
             const launchSite = launch.launch_site.site_name_long;
