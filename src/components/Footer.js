@@ -8,9 +8,9 @@ const Footer = () => (
                 <img className="logo_footer" src={require("../images/spacex_logo_white.png")} alt="SpaceX logo" />
             </div>
             <div className="footer_social__container">
-                <span>Icon 1</span>
-                <span>Icon 2</span>
-                <span>Icon 3</span>
+                <a href="https://twitter.com/spacex" target="_blank" rel="noopener noreferrer" ><i className="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com/spacex" target="_blank" rel="noopener noreferrer" ><i className="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/spacex/" target="_blank" rel="noopener noreferrer" ><i className="fab fa-instagram"></i></a>
             </div>
             <div className="footer_copyright__container">
                 <p>&copy; Copyright 2019 SpaceX all rights reserved.</p>

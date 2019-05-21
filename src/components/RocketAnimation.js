@@ -47,7 +47,7 @@ const RocketAnimation = () => (
               paused
               target={
                 <div className="newsletter_container">
-                  <h2>enabling people to live on other planets.</h2>
+                  <h2>Enabling people to live on other planets.</h2>
                 </div>
               }
             >
