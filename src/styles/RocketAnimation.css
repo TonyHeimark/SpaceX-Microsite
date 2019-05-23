@@ -25,10 +25,12 @@
     background-size: cover;
     width: 100%;
     overflow: hidden;
-    }
+  }
 
   .newsletter_container h2{
     font-size: 6rem;
+    max-width: 500px;
+    width: auto;
     margin: 0 auto;
     padding: 0 0 0 5%;
   }

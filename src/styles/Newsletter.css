@@ -2,7 +2,7 @@
     text-align: center;
     border: 2px solid white;
     border-radius: 4px;
-    height: 365px;
+    min-height: 365px;
     margin: 0 auto;
     max-width: 600px;
     width: 90%;
@@ -10,18 +10,21 @@
 
 .newsletter_title{
     font-size: 2.6rem;
+    padding: 0 10px;
 }
 
 .newsletter_paragraph{
     font-size: 1.8rem;
-    width: 300px;
+    max-width: 300px;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 .newsletter_input{
     height: 25px;
     margin-top: 5px;
-    width: 250px;
+    max-width: 250px;
+    width: 80%;
     background-color: black;
     border: 2px solid white;
     border-radius: 4px;
@@ -67,11 +70,9 @@
         text-align: center;
         border: 2px solid white;
         border-radius: 4px;
-        height: 365px;
+        height: auto;
         margin: 0 auto;
         max-width: 600px;
         width: 90%;
     }
-    
-
 }
