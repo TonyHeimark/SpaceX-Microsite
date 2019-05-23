@@ -1,13 +1,24 @@
 .next_mission_div{
-    margin-top: 170px;
+    margin-top: 150px;
     height: 600px;
-    top: 100px;
 }
 
 .next_mission{
     width: 100%;
     text-align: center;
     color: white;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    max-width: 900px;
+}
+
+.badge_container{
+    text-align: left;
+}
+
+.next_mission_badge{
+    width: 300px;
+    margin-top: 60px;
 }
 
 .next_mission__title{
@@ -72,6 +83,29 @@
 
 @media (max-width: 768px){
 
+    .next_mission{
+        width: 100%;
+        text-align: center;
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    .badge_container{
+        text-align: center;
+        grid-row: 1;
+    }
+    
+    .next_mission_badge{
+        width: 150px;
+        margin: 0 auto 30px;
+    }
+
+    .next_mission_div{
+        margin-top: -20px;
+        height: 600px;
+    }
+
     .next_mission__title{
         font-size: 3rem;
     }
@@ -84,3 +118,5 @@
         font-size: 5rem;
     }
 }
+
+

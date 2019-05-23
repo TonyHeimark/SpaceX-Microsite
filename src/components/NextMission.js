@@ -28,12 +28,14 @@ export default class App extends React.Component{
         })
         .then((data) => {
             console.log(data)
+            let badge = data.links.mission_patch;
             let streamLink = data.links.video_link;
             let missionName = data.mission_name;
             let launch = data.launch_date_unix;
             let description = data.details;
             this.setState(()=>({
                 nextLaunch: [launch],
+                badge: badge,
                 missionName: missionName,
                 description: description,
                 link: streamLink,
@@ -63,13 +65,18 @@ export default class App extends React.Component{
 
         const jsx = (
             <div className="next_mission">
-                <h1 className="next_mission__title">{this.state.missionName}</h1>
-                {launch ? <span className="next_mission__launch">Launch:</span> : undefined}
-                <span className="next_mission__countdown">{launch ? <Countdown date={launch} /> : "Recently Launched"}</span>
-                {this.state.link ? <a href={this.state.link} target="_blank" rel="noopener noreferrer"><button className="next_mission__button button">Watch Stream</button></a> : undefined}
-                <button className="next_mission__button button" onClick={this.handleDescription}>{!this.state.buttonClicked ? "Learn more about this mission" : "Close details"}</button>
-                <div className="next_mission__description">
-                    {this.state.buttonClicked ? <p className="next_mission__p">{this.state.description}</p> : <p className="next_mission__p--hidden">{this.state.description}</p>}
+                <div className="next_mission_container">
+                    <h1 className="next_mission__title">{this.state.missionName}</h1>
+                    {launch ? <span className="next_mission__launch">Launch:</span> : undefined}
+                    <span className="next_mission__countdown">{launch ? <Countdown date={launch} /> : "Recently Launched"}</span>
+                    {this.state.link ? <a href={this.state.link} target="_blank" rel="noopener noreferrer"><button className="next_mission__button button">Watch Stream</button></a> : undefined}
+                    <button className="next_mission__button button" onClick={this.handleDescription}>{!this.state.buttonClicked ? "Learn more about this mission" : "Close details"}</button>
+                    <div className="next_mission__description">
+                        {this.state.buttonClicked ? <p className="next_mission__p">{this.state.description}</p> : <p className="next_mission__p--hidden">{this.state.description}</p>}
+                    </div>
+                </div>
+                <div className="badge_container">
+                    <img src={this.state.badge} alt="Mission patch badge" className="next_mission_badge" />
                 </div>
             </div>
         )
