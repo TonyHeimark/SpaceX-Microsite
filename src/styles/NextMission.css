@@ -1,3 +1,9 @@
+.next_mission_div{
+    margin-top: 170px;
+    height: 600px;
+    top: 100px;
+}
+
 .next_mission{
     width: 100%;
     text-align: center;
@@ -6,7 +12,6 @@
 
 .next_mission__title{
     font-size: 4rem;
-    margin-top: 300px;
     font-weight: 300;
     text-transform: uppercase;
     padding: 0 10px;

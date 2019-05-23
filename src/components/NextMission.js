@@ -75,7 +75,7 @@ export default class App extends React.Component{
         )
 
         return (
-            <div>
+            <div className="next_mission_div">
                 {this.state.loading 
                 ?
                     <div className="loading_spinner loading_spinner--noMargin">
