@@ -7,9 +7,12 @@
     width: 100%;
     text-align: center;
     color: white;
+    max-width: 900px;
+}
+
+.next_mission--grid{
     display: grid;
     grid-template-columns: 60% 40%;
-    max-width: 900px;
 }
 
 .badge_container{
@@ -73,11 +76,14 @@
 }
 
 
-
 @media (max-width: 1025px){
 
     .next_mission__countdown{
         font-size: 5rem;
+    }
+
+    .next_mission_badge{
+        width: 250px;
     }
 }
 
@@ -87,7 +93,9 @@
         width: 100%;
         text-align: center;
         color: white;
-        display: grid;
+    }
+
+    .next_mission--grid{
         grid-template-columns: 1fr;
     }
     

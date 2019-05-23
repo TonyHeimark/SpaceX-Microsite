@@ -64,7 +64,7 @@ export default class App extends React.Component{
         }
 
         const jsx = (
-            <div className="next_mission">
+            <div className={this.state.badge ? "next_mission next_mission--grid" : "next_mission" }>
                 <div className="next_mission_container">
                     <h1 className="next_mission__title">{this.state.missionName}</h1>
                     {launch ? <span className="next_mission__launch">Launch:</span> : undefined}
@@ -75,9 +75,15 @@ export default class App extends React.Component{
                         {this.state.buttonClicked ? <p className="next_mission__p">{this.state.description}</p> : <p className="next_mission__p--hidden">{this.state.description}</p>}
                     </div>
                 </div>
-                <div className="badge_container">
-                    <img src={this.state.badge} alt="Mission patch badge" className="next_mission_badge" />
-                </div>
+                {
+                this.state.badge
+                ?
+                    <div className="badge_container">
+                        <img src={this.state.badge} alt="Mission patch badge" className="next_mission_badge" />
+                    </div>
+                :
+                    undefined
+                }
             </div>
         )
 
