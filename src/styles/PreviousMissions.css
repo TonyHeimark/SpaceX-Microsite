@@ -1,0 +1,32 @@
+
+
+@media (max-width: 500px){
+
+    .launch_box--3column{
+        grid-template-columns: 1fr;
+    }
+    
+    .launch_box--3column .launch_badge{
+        grid-column: 1;
+        grid-row: 1;
+        height: 127px;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .launch_box--3column .launch_title{
+        grid-row: 2;
+    }
+    
+    .launch_box--3column .launch_date{
+        grid-row: 3;
+    }
+
+    .launch_box--3column .launch_box a{
+        grid-row: 6;
+    }
+    
+    ..launch_box--3column .launch_button{
+        grid-row: 5;
+    }
+}
