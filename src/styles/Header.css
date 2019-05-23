@@ -37,6 +37,7 @@
     font-weight: 400;
     border-bottom: 2px solid transparent;
     line-height: 5px;
+    z-index: 999;
 }
 
 .nav_link:hover{
