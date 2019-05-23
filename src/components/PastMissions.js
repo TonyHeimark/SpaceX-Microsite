@@ -51,6 +51,7 @@ export default class App extends React.Component{
         
         const jsx = this.state.past.map((launch) => {
 
+            const launchBadge = launch.links.mission_patch_small;
             const launchName = launch.mission_name;
             const launchTime = new Date(launch.launch_date_unix*1000);
             const launchDate = launchTime.toString().substring(0,16);
@@ -60,11 +61,12 @@ export default class App extends React.Component{
 
             return (
                 <div key={launchName} className="launch_box_container">
-                    <div className="launch_box">
+                    <div className={launchBadge ? "launch_box launch_box--3column" : "launch_box"}>
                         <h3 className="launch_title">{launchName}</h3>
                         <p className="launch_date">{launchDate}</p>
                         <button className="button launch_button" onClick={this.handleViewDetails}>{this.state.details === launchName ? "Hide Details" : "View Details"}</button>
                         {launchVideo ? <a target="_blank" rel="noopener noreferrer" href={launchVideo}><button className="button launch_button">Watch Stream</button></a> : undefined}
+                        {launchBadge ? <img src={launchBadge} alt="Mission patch babge" className="launch_badge" /> : undefined}
                         <div className={this.state.details === launchName ? "visible launch_details_box" : "fade-Out hidden"}>
                             <div>
                                 <span className="launch_details_box__subtitle" >Details:</span>

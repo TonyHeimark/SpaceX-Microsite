@@ -15,6 +15,18 @@
     border: 2px solid white;
 }
 
+.launch_box--3column{
+    grid-template-columns: 1fr 1fr 128px;
+}
+
+.launch_badge{
+    text-align: right;
+    height: 100%;
+    max-height: 127px;
+    grid-column: 3;
+    grid-row: 1/3;
+}
+
 .launch_title{
     font-size: 3rem;
     margin: 0 20px 10px 0;
@@ -40,7 +52,7 @@
 .launch_details_box{
     grid-row-start: 3;
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 4;
     margin-top: 50px;
     background: #4e2929;
     padding: 20px;
@@ -84,12 +96,17 @@
 @media (max-width: 768px){
 
     .launch_box{
-        width: 90%;
         padding: 10px;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 128px;
+    }
+    
+    .launch_badge{
+        grid-column: 2/3;
+        grid-row: 1/5;
     }
 
     .launch_title{
+        grid-column: 1/2;
         grid-row: 1;
         text-align: center;
         width: 300px;
@@ -97,6 +114,7 @@
     }
     
     .launch_date{
+        grid-column: 1/2;
         grid-row: 2;
         text-align: center;
         width: 300px;
@@ -104,17 +122,53 @@
     }
 
     .launch_box a{
+        grid-column: 1/2;
         width: 130px;
         margin: 0 auto;
         grid-row: 5;
     }
     
     .launch_box .launch_button{
+        grid-column: 1/2;
         width: 130px;
         margin: 20px auto 10px;
         padding: 0px;
         text-align: center;
         grid-row: 4;
     }
+
+}
+
+@media (max-width: 500px){
+
+    .launch_box{
+        padding: 10px;
+        grid-template-columns: 1fr;
+    }
+    
+    .launch_badge{
+        grid-column: 1;
+        grid-row: 1;
+        height: 127px;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .launch_title{
+        grid-row: 2;
+    }
+    
+    .launch_date{
+        grid-row: 3;
+    }
+
+    .launch_box a{
+        grid-row: 6;
+    }
+    
+    .launch_box .launch_button{
+        grid-row: 5;
+    }
+
 
 }

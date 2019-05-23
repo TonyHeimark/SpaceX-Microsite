@@ -24,9 +24,14 @@ html, body{
     background-color: #000000;
 }
 
-.section1, .section2{
+.section2{
     height: auto;
     padding: 100px 0;
+}
+
+.section1{
+    height: auto;
+    padding: 100px 0 0;
 }
 
 .section1--morePadding, .section2--morePadding{
