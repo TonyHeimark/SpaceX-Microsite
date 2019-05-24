@@ -50,11 +50,11 @@
 }
 
 .launch_details_box{
-    grid-row-start: 3;
+    grid-row-start: 5;
     grid-column-start: 1;
     grid-column-end: 3;
-    margin-top: 50px;
-    background: #4e2929;
+    margin-top: 30px;
+    background: #29324e;
     padding: 20px;
     border-radius: 4px;
 }
