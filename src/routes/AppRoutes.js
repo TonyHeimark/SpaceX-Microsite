@@ -18,7 +18,7 @@ const AppRouter = ()=> (
             <Route path="/previous-launches" component={PreviousLaunchesPage} />
             <Route path="/upcoming-launches" component={UpcomingLaunchesPage} />
             <Route path="/launch-sites" component={LaunchSitePage} />
-            <Route component={NotFoundPage} />
+            <Route path="/" component={NotFoundPage} exact={false} />
         </Switch>
         <Footer/>
     </div>
