@@ -21,7 +21,7 @@ html, body{
 }
 
 .App{
-    background-color: #000000;
+    background: url("../images/fallingStar2.jpg");
 }
 
 .section2{
