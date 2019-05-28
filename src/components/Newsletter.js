@@ -1,4 +1,5 @@
 import React from "react";
+import Zoom from "react-reveal/Zoom";
 import "../styles/Newsletter.css";
 
 export default class App extends React.Component{
@@ -62,13 +63,15 @@ export default class App extends React.Component{
 
     render() {
         return (
-            <div className="newsletter">
-                <h2 className="newsletter_title">Subscribe to our Newsletter</h2>
-                <p className="newsletter_paragraph">If you want to stay up to date with our launches and our exciting plans for the future. Sign up now!</p>
-                <span className={this.state.messageClass}>{this.state.validation}</span>
-                <input onKeyDown={this.handleKeyDown} onInput={this.handleInput} className={this.state.inputClass} type="text" placeholder="JaneDoe@gmail.com" />
-                <button onClick={this.handleSubmit} className="button newsletter_button">Submit</button>
-            </div>
+            <Zoom>
+                <div className="newsletter">
+                    <h2 className="newsletter_title">Subscribe to our Newsletter</h2>
+                    <p className="newsletter_paragraph">If you want to stay up to date with our launches and our exciting plans for the future. Sign up now!</p>
+                    <span className={this.state.messageClass}>{this.state.validation}</span>
+                    <input onKeyDown={this.handleKeyDown} onInput={this.handleInput} className={this.state.inputClass} type="text" placeholder="JaneDoe@gmail.com" />
+                    <button onClick={this.handleSubmit} className="button newsletter_button">Submit</button>
+                </div>
+            </Zoom>
         )
     }
 
