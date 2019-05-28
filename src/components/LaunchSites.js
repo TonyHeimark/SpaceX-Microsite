@@ -10,8 +10,11 @@ export default class App extends React.Component{
 
         this.state={
             site: [],
-            loading: true
+            loading: true,
+            iframeLoading: true,
         }
+
+        this.handleIframeSpinner = this.handleIframeSpinner.bind(this);
     }
 
     componentWillMount(){
@@ -26,10 +29,14 @@ export default class App extends React.Component{
                 site: site,
                 loading: false,
             }));
-
-            console.log(site);
         });
 
+    }
+
+    handleIframeSpinner() {
+        this.setState(() =>({
+            iframeLoading: false
+        }));
     }
 
     render(){
@@ -54,13 +61,27 @@ export default class App extends React.Component{
                             <a target="_blank" rel="noopener noreferrer" href={site.wikipedia}><button className="button launch_site_box__button">Read more on Wikipedia</button></a>
                         </div>
                         
-                        <iframe className="launch_site__map"
+                        {this.state.iframeLoading 
+                        ?
+                            <div className="loading_subSpinner">
+                                <CircleSpinner
+                                    size={40}
+                                    color="#ffffff"
+                                    loading={this.state.iframeLoading}
+                                /> 
+                            </div>   
+                        :   
+                            undefined
+                    }
+
+                    <iframe className="launch_site__map"
                             title={site.location.name}
                             src={`https://maps.google.com/maps?q=${site.location.latitude}%2C%20${site.location.longitude}&t=k&z=9&ie=UTF8&iwloc=&output=embed`}
+                            onLoad={this.handleIframeSpinner}
                             frameBorder="0"
                             scrolling="no"
-                        >
-                        </iframe>
+                            >
+                    </iframe>
                         
                     </div>
                 </Fade>

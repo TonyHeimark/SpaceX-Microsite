@@ -57,8 +57,9 @@ html, body{
 }
 
 .button:active{
-    border: 2px solid rgb(4, 32, 51);
-    background-color: rgb(4, 32, 51);
+    background-color: rgb(16, 22, 26);
+    border: 2px solid #06436C;
+    transition: .3s ease-in-out;
 }
 
 .loading_spinner{
@@ -70,6 +71,16 @@ html, body{
     justify-content: center;
     align-items: center;
     margin: 0 auto 100vh;
+}
+
+.loading_subSpinner{
+    width: 100%;
+    height: 100%;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .loading_spinner--noMargin{

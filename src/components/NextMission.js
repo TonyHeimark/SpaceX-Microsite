@@ -1,6 +1,7 @@
 import React from 'react';
 import "../styles/NextMission.css";
 import { CircleSpinner } from "react-spinners-kit";
+import Zoom from "react-reveal/Zoom";
 import Countdown from 'react-countdown-now';
 
 
@@ -72,7 +73,7 @@ export default class App extends React.Component{
                     {this.state.link ? <a href={this.state.link} target="_blank" rel="noopener noreferrer"><button className="next_mission__button button">Watch Stream</button></a> : undefined}
                     <button className="next_mission__button button" onClick={this.handleDescription}>{!this.state.buttonClicked ? "Learn more about this mission" : "Close details"}</button>
                     <div className="next_mission__description">
-                        {this.state.buttonClicked ? <p className="next_mission__p">{this.state.description}</p> : <p className="next_mission__p--hidden">{this.state.description}</p>}
+                        {this.state.buttonClicked ? <Zoom><p className="next_mission__p">{this.state.description}</p></Zoom> : <p className="next_mission__p--hidden">{this.state.description}</p>}
                     </div>
                 </div>
                 {
@@ -99,7 +100,9 @@ export default class App extends React.Component{
                         /> 
                     </div>
                 :
-                    jsx
+                    <Zoom>
+                        {jsx}
+                    </Zoom>
                 }
             </div>
         )
