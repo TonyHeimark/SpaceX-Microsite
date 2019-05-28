@@ -42,7 +42,7 @@
 
 .launch_button{
     width: 150px;
-    height: 60px;
+    height: 40px;
     margin-bottom: 10px;
 }
 .launch_box a{
@@ -54,7 +54,7 @@
     grid-column-start: 1;
     grid-column-end: 3;
     margin-top: 30px;
-    background: #29324e;
+    background: #06436C;
     padding: 20px;
     border-radius: 4px;
 }

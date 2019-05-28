@@ -50,8 +50,9 @@ html, body{
 }
 
 .button:hover{
-    background-color: white;
-    color: black;
+    background-color: #06436C;
+    border: 2px solid #06436C;
+    color: white;
     transition: .3s ease-in-out;
     cursor: pointer;
 }

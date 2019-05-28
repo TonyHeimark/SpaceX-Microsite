@@ -12,11 +12,7 @@
 .launch_site_box{
     height: 100%;
     padding-left: 20px;
-    background-color: transparent;
-}
-
-.launch_site_box:hover{
-
+    background-color: #000;
 }
 
 .launch_site_box__title{
