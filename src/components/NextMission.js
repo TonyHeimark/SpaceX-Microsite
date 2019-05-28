@@ -65,7 +65,7 @@ export default class App extends React.Component{
 
         const jsx = (
             <div className={this.state.badge ? "next_mission next_mission--grid" : "next_mission" }>
-                <div className="next_mission_container">
+                <div className={this.state.badge ? "next_mission_container" : "next_mission_container next_mission_container--spaceTop"}>
                     <h1 className="next_mission__title">{this.state.missionName}</h1>
                     {launch ? <span className="next_mission__launch">Launch:</span> : undefined}
                     <span className="next_mission__countdown">{launch ? <Countdown date={launch} /> : "Recently Launched"}</span>

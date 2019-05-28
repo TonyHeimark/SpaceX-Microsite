@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import NextMission from "../components/NextMission";
 import RocketAnimation from "../components/RocketAnimation";
-import Newsletter from "../components/Newsletter";
 import News from "../components/News";
 import "../styles/HomePage.css";
 
@@ -20,9 +19,6 @@ const HomePage = () => {
                 <News />
             </div>
             <RocketAnimation />
-            <div className="section2">
-                <Newsletter />
-            </div>
         </div>
     );
 }

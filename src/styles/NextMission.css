@@ -89,6 +89,10 @@
 
 @media (max-width: 768px){
 
+    .next_mission_container--spaceTop{
+        margin-top: 100px;
+    }
+
     .next_mission{
         width: 100%;
         text-align: center;

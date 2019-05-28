@@ -21,25 +21,15 @@
   
   .sticky {
     height: 100vh;
-    background: url("../images/space.jpg");
+    background: url("../images/space1.jpg");
     background-size: cover;
     width: 100%;
     overflow: hidden;
   }
 
-  .newsletter_container h2{
-    font-size: 6rem;
-    max-width: 500px;
-    width: auto;
-    margin: 0 auto;
-    padding: 0 0 0 5%;
+  .newsletter_container{
+    width: 100% !important;
+    margin: 0;
   }
 
   
-
-@media (max-width: 768px){
-
-  .newsletter_container h2{
-    font-size: 4em;
-  }
-}

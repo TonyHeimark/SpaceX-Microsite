@@ -3,6 +3,7 @@ import { Controller, Scene } from 'react-scrollmagic';
 import { Tween, Timeline } from 'react-gsap';
 import falcon9 from "../images/Falcon9.svg";
 import fire from "../images/fire.svg";
+import Newsletter from "../components/Newsletter";
 import "../styles/RocketAnimation.css";
 
 
@@ -47,13 +48,13 @@ const RocketAnimation = () => (
               paused
               target={
                 <div className="newsletter_container">
-                  <h2>Enabling people to live on other planets.</h2>
+                  <Newsletter />
                 </div>
               }
             >
               <Tween
-                  from={{ x: '200%', width: "90%", y: "-30vh"}}
-                  to={{ x: '0%', width: "90%", y: "-66vh"}}
+                  from={{ x: '200%', width: "100%", y: "-300px", height: "0%"}}
+                  to={{ x: '0%', width: "100%", y: "-500px", height: "auto"}}
               />
             </Timeline>
           </div>

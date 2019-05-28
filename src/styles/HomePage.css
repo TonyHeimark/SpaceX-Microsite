@@ -6,10 +6,3 @@
     display: grid;
     place-content: center;
 }
-
-@media (max-width: 768px){
-
-    .top_section{
-        min-height: 950px;
-    }
-}
