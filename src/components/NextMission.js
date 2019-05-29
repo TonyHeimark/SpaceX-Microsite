@@ -73,7 +73,15 @@ export default class App extends React.Component{
                     {this.state.link ? <a href={this.state.link} target="_blank" rel="noopener noreferrer"><button className="next_mission__button button">Watch Stream</button></a> : undefined}
                     <button className="next_mission__button button" onClick={this.handleDescription}>{!this.state.buttonClicked ? "Learn more about this mission" : "Close details"}</button>
                     <div className="next_mission__description">
-                        {this.state.buttonClicked ? <Zoom><p className="next_mission__p">{this.state.description}</p></Zoom> : <p className="next_mission__p--hidden">{this.state.description}</p>}
+                        <Zoom when={this.state.buttonClicked}>
+                            {
+                                this.state.buttonClicked
+                            ?
+                                <p className="next_mission__p">{this.state.description}</p>
+                            :
+                                <p className="next_mission__p--hidden">{this.state.description}</p>
+                            }
+                        </Zoom>
                     </div>
                 </div>
                 {

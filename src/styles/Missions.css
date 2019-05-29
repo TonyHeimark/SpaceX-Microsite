@@ -7,6 +7,7 @@
     max-width: 700px;
     width: 90%;
     margin: 40px auto;
+    height: auto;
     background: #000;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -72,22 +73,6 @@
 .launch_details_box__payload_item{
     font-size: 1.8rem;
 }
-
-
-.hidden{
-    visibility: hidden;
-    opacity: 0;
-    height: 0px;
-}
-
-.visible{
-    visibility: visible;
-    opacity: 1;
-    transition: .3s ease-in-out;
-    height: auto;
-}
-
-
 
 @media (max-width: 1025px){
     

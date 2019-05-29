@@ -57,15 +57,8 @@ export default class App extends React.Component{
             const launchRocket = launch.rocket.rocket_name;
             const launchSite = launch.launch_site.site_name_long;
 
-            return (
-                <Fade bottom>
-                    <div key={launchName} className="launch_box_container">
-                        <div className="launch_box">
-                            <h3 className="launch_title">{launchName}</h3>
-                            <p className="launch_date">{launchDate}</p>
-                            <button className="button launch_button" onClick={this.handleViewDetails}>{this.state.details === launchName ? "Hide Details" : "View Details"}</button>
-                            {launchVideo ? <a target="_blank" rel="noopener noreferrer" href={launchVideo}><button className="button launch_button">Watch Stream</button></a> : undefined}
-                            <div className={this.state.details === launchName ? "visible launch_details_box" : "hidden"}>
+            const missionDetails =
+                            <div className="launch_details_box">
                                 <div>
                                     <span className="launch_details_box__subtitle" >Details:</span>
                                     <p className="launch_details_box__content" >{launch.details ? launch.details : "No details to show at this time."}</p>
@@ -96,7 +89,45 @@ export default class App extends React.Component{
                                         <p>No payloads to show at this time.</p>
                                     }
                                 </div>
+                                <div>
+                                {
+                                    launch.ships.length >= 1
+                                ?
+                                    <div>
+                                    <span className="launch_details_box__subtitle" >Ships:</span>
+                                    <ul>
+                                        {launch.ships.map((ship) => {
+                                            return (
+                                                    <li key={ship} className="launch_details_box__payload_item">{ship ? ship : "No info at this time"}</li>
+                                            )
+                                        })}
+                                        </ul>
+                                    </div>
+                                :
+                                    undefined
+                                }
+                                </div>
                             </div>
+
+            return (
+                <Fade bottom key={launchName}>
+                    <div key={launchName} className="launch_box_container">
+                        <div className="launch_box">
+                            <h3 className="launch_title">{launchName}</h3>
+                            <p className="launch_date">{launchDate}</p>
+                            <button className="button launch_button" onClick={this.handleViewDetails}>{this.state.details === launchName ? "Hide Details" : "View Details"}</button>
+                            {launchVideo ? <a target="_blank" rel="noopener noreferrer" href={launchVideo}><button className="button launch_button">Watch Stream</button></a> : undefined}
+                            
+                            <Fade when={this.state.details === launchName}>
+                            {
+                                this.state.details === launchName
+                            ?
+                                missionDetails
+                            :
+                                undefined
+                            }
+                            </Fade>
+
                         </div>
                     </div>
                 </Fade>

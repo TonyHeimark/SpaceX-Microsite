@@ -34,11 +34,12 @@
     color: white;
     text-decoration: none;
     margin: 0 10px;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 400;
     border-bottom: 2px solid transparent;
     line-height: 5px;
     z-index: 999;
+    text-transform: uppercase;
 }
 
 .nav_link:hover{
@@ -113,10 +114,11 @@
     .nav_link{
         padding: 10px;
         margin: 60px auto;
-        font-size: 3rem;
+        font-size: 2rem;
         border-bottom: none;
         display: block;
         opacity: 0.9;
+        text-transform: uppercase;
     }
 
     .nav_link:hover{

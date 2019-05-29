@@ -47,8 +47,8 @@
 }
 
 .newsletter_message--error{
-    color: lightcoral;
-    border-color: lightcoral;
+    color: #B30D29;
+    border-color: #B30D29;
 }
 
 .newsletter_input--success{
@@ -56,7 +56,7 @@
 }
 
 .newsletter_input--error{
-    border-color: lightcoral;
+    border-color: #B30D29;
 }
 
 .newsletter_button{
