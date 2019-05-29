@@ -48,6 +48,7 @@
 
 .newsletter_message--error{
     color: #B30D29;
+    font-weight: 900;
     border-color: #B30D29;
 }
 
