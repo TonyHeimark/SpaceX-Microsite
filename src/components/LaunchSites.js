@@ -44,8 +44,8 @@ export default class App extends React.Component{
         const jsx = this.state.site.map((site) => {
 
             return (
-                <Fade bottom>
-                    <div key={site.id} className="launch_site_container">
+                <Fade bottom key={site.id}>
+                    <div className="launch_site_container">
 
                         <div className="launch_site_box">
                             <h3 className="launch_site_box__title">{site.site_name_long}</h3>

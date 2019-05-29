@@ -16,6 +16,8 @@
     margin-bottom: 50px;
 }
 
+/* Media Queries */
+
 @media (max-width: 768px){
     .notfoundpage_container h1{
         font-size: 3rem;

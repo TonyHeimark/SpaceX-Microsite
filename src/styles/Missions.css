@@ -74,9 +74,7 @@
     font-size: 1.8rem;
 }
 
-@media (max-width: 1025px){
-    
-}
+/* Media Queries */
 
 @media (max-width: 768px){
 

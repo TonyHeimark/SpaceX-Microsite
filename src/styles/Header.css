@@ -5,7 +5,7 @@
     z-index: 998;
 }
 
-.header_inner{
+.header__inner-block{
     max-width: 1000px;
     margin: 0 auto;
     display: grid;
@@ -48,7 +48,7 @@
     transition: .3s ease-in-out;
 }
 
-.is-active{
+.nav_link--active{
     border-bottom: 2px solid white;
     line-height: 5px;
 }
@@ -92,6 +92,8 @@
     transform: rotate(45deg) translate(-5px, -8px);
 }
 
+/* Media Queries */
+
 @media (max-width: 768px){
 
     .header{
@@ -127,7 +129,7 @@
         transition: none;
     }
 
-    .is-active{
+    .nav_link--active{
         font-weight: 600;
         opacity: 1;
     }

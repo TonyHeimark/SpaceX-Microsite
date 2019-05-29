@@ -30,8 +30,6 @@ export default class App extends React.Component{
                 past: past.reverse(),
                 loading: false,
             }));
-
-            console.log(past);
         });
 
     }

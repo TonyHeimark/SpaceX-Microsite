@@ -24,7 +24,6 @@ export default class App extends React.Component{
         })
         .then((data) => {
             const upcoming = data;
-            console.log(data)
 
             this.setState(()=>({
                 upcoming: upcoming,
@@ -98,7 +97,7 @@ export default class App extends React.Component{
                                     <ul>
                                         {launch.ships.map((ship) => {
                                             return (
-                                                    <li key={ship} className="launch_details_box__payload_item">{ship ? ship : "No info at this time"}</li>
+                                                <li key={ship} className="launch_details_box__payload_item">{ship ? ship : "No info at this time"}</li>
                                             )
                                         })}
                                         </ul>
@@ -115,7 +114,14 @@ export default class App extends React.Component{
                         <div className="launch_box">
                             <h3 className="launch_title">{launchName}</h3>
                             <p className="launch_date">{launchDate}</p>
-                            <button className="button launch_button" onClick={this.handleViewDetails}>{this.state.details === launchName ? "Hide Details" : "View Details"}</button>
+                            <button className="button launch_button"
+                                    onClick={this.handleViewDetails}
+                            >{
+                                this.state.details === launchName
+                            ?   "Hide Details"
+                            :
+                                "View Details"
+                            }</button>
                             {launchVideo ? <a target="_blank" rel="noopener noreferrer" href={launchVideo}><button className="button launch_button">Watch Stream</button></a> : undefined}
                             
                             <Fade when={this.state.details === launchName}>

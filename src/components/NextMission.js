@@ -28,7 +28,6 @@ export default class App extends React.Component{
             return response.json();
         })
         .then((data) => {
-            console.log(data)
             let badge = data.links.mission_patch;
             let streamLink = data.links.video_link;
             let missionName = data.mission_name;
