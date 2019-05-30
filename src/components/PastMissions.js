@@ -113,7 +113,7 @@ export default class App extends React.Component{
 
             return (
                 <Fade bottom key={launchName}>
-                    <main key={launchName} className="launch_box_container">
+                    <div key={launchName} className="launch_box_container">
                         <div className={launchBadge ? "launch_box launch_box--3column" : "launch_box"}>
                             <h3 className="launch_title">{launchName}</h3>
                             <p className="launch_date">{launchDate}</p>
@@ -132,13 +132,13 @@ export default class App extends React.Component{
                             </Fade>
 
                         </div>
-                    </main>
+                    </div>
                 </Fade>
             )
         })
 
         return(
-            <div>
+            <section role="main">
                 {this.state.loading 
                 ?
                     <div className="loading_spinner">
@@ -151,6 +151,6 @@ export default class App extends React.Component{
                 :
                     jsx
                 }
-            </div>
+            </section>
         )}
 }

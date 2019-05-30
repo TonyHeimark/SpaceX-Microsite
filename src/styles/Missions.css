@@ -9,6 +9,8 @@
     margin: 40px auto;
     height: auto;
     background: #000;
+    display:-ms-grid;
+    -ms-grid-columns: 1fr 1fr;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 20px;
@@ -17,6 +19,7 @@
 }
 
 .launch_box--3column{
+    -ms-grid-columns: 1fr 1fr 128px;
     grid-template-columns: 1fr 1fr 128px;
 }
 
@@ -24,11 +27,16 @@
     text-align: right;
     height: 100%;
     max-height: 127px;
+    -ms-grid-column: 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
     grid-column: 3;
     grid-row: 1/3;
 }
 
 .launch_title{
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
     font-size: 3rem;
     margin: 0 20px 10px 0;
     padding: 0;
@@ -36,21 +44,31 @@
 }
 
 .launch_date{
+    -ms-grid-column: 2;
+    -ms-grid-row: 1;
     font-size: 2rem;
     margin: 0;
     padding: 10px 0 20px 0;
 }
 
 .launch_button{
+    -ms-grid-column: 1;
+    -ms-grid-row: 3;
     width: 150px;
     height: 40px;
     margin-bottom: 10px;
 }
 .launch_box a{
     width: 150px;
+    -ms-grid-column: 2;
+    -ms-grid-row: 3;
+    float: left;
 }
 
 .launch_details_box{
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    -ms-grid-row: 5;
     grid-row-start: 5;
     grid-column-start: 1;
     grid-column-end: 3;

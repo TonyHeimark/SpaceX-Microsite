@@ -3,6 +3,8 @@
     min-height: 800px;
     background: url("../images/fallingStar.jpg");
     background-size: cover;
+    display:-ms-flexbox;
+    -ms-flex-align: center;
     display: grid;
     place-content: center;
 }

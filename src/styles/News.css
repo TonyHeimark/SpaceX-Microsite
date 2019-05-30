@@ -1,4 +1,5 @@
 .news{
+    display:-ms-flexbox;
     display: grid;
     margin: 50px auto 50px;
     max-width: 1200px;

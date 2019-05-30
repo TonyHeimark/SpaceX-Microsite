@@ -11,7 +11,9 @@
 }
 
 .next_mission--grid{
+    display:-ms-flexbox;
     display: grid;
+    -ms-grid-columns: 60% 40%;
     grid-template-columns: 60% 40%;
 }
 

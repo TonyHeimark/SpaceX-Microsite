@@ -45,7 +45,7 @@ export default class App extends React.Component{
 
             return (
                 <Fade bottom key={site.id}>
-                    <main className="launch_site_container">
+                    <div className="launch_site_container">
 
                         <div className="launch_site_box">
                             <h3 className="launch_site_box__title">{site.site_name_long}</h3>
@@ -83,13 +83,13 @@ export default class App extends React.Component{
                             >
                     </iframe>
                         
-                    </main>
+                    </div>
                 </Fade>
             )
         })
 
         return(
-            <div>
+            <section role="main">
                 {this.state.loading 
                 ?
                     <div className="loading_spinner">
@@ -102,6 +102,6 @@ export default class App extends React.Component{
                 :
                     jsx
                 }
-            </div>
+            </section>
         )}
 }
