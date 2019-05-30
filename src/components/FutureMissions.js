@@ -1,7 +1,9 @@
 import React from 'react';
+import SearchBar from "../components/SearchBar";
 import "../styles/Missions.css";
 import { CircleSpinner } from "react-spinners-kit";
 import Fade from "react-reveal/Fade";
+import Zoom from "react-reveal/Zoom";
 
 export default class App extends React.Component{
 
@@ -10,11 +12,14 @@ export default class App extends React.Component{
 
         this.state={
             upcoming: [],
+            storeState: [],
             details: "",
-            loading: true
+            loading: true,
+            errorMessage: ""
         }
 
-        this.handleViewDetails = this.handleViewDetails.bind(this) 
+        this.handleViewDetails = this.handleViewDetails.bind(this)
+        this.handleFilter = this.handleFilter.bind(this)
     }
 
     componentWillMount(){
@@ -23,10 +28,11 @@ export default class App extends React.Component{
             return response.json();
         })
         .then((data) => {
-            const upcoming = data;
+            const Missions = data;
 
             this.setState(()=>({
-                upcoming: upcoming,
+                upcoming: Missions,
+                storeState: Missions,
                 loading: false
             }));
         });
@@ -44,6 +50,38 @@ export default class App extends React.Component{
             }))
         }
     } 
+
+    
+    handleFilter(e) {
+        const launches = this.state.storeState;
+        const search = e.target.parentElement.children[1].value.toLowerCase()
+
+        const filteredLaunches = launches.filter((launch) =>{
+            let result = launch.mission_name.toLowerCase().includes(search)
+            return result;
+        });
+
+        if(filteredLaunches.length === 0){
+            this.setState(() =>({
+                errorMessage: "There are no results that match your search"
+            }));
+        } else {
+            this.setState(() =>({
+                errorMessage: ""
+            }));
+        }
+
+        this.setState(() =>({
+            upcoming: filteredLaunches,
+            loading: true,
+        }));
+
+        setTimeout(() =>{
+            this.setState(() =>({
+                loading: false,
+            }));
+        }, 500);
+    }
 
     render(){
         
@@ -142,6 +180,8 @@ export default class App extends React.Component{
 
         return(
             <section role="main">
+                <Zoom><SearchBar handleFilter={this.handleFilter} /></Zoom>
+                {this.state.errorMessage ? <p className="error-message">{this.state.errorMessage}</p> : undefined}
                 {this.state.loading 
                 ?
                     <div className="loading_spinner">

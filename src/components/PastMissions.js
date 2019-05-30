@@ -1,7 +1,9 @@
 import React from 'react';
+import SearchBar from "../components/SearchBar";
 import "../styles/Missions.css";
 import "../styles/PreviousMissions.css";
 import Fade from "react-reveal/Fade";
+import Zoom from "react-reveal/Zoom";
 import { CircleSpinner } from "react-spinners-kit";
 
 export default class App extends React.Component{
@@ -10,12 +12,15 @@ export default class App extends React.Component{
         super(props)
 
         this.state={
-            past: [],
+            pastMissions: [],
+            storeState: [],
             details: "",
             loading: true,
+            errorMessage: ""
         }
 
-        this.handleViewDetails = this.handleViewDetails.bind(this) 
+        this.handleViewDetails = this.handleViewDetails.bind(this)
+        this.handleFilter = this.handleFilter.bind(this)
     }
 
     componentWillMount(){
@@ -24,18 +29,50 @@ export default class App extends React.Component{
             return response.json();
         })
         .then((data) => {
-            const past = data;
+            const Missions = data;
 
             this.setState(()=>({
-                past: past.reverse(),
+                pastMissions: Missions.reverse(),
+                storeState: Missions,
                 loading: false,
             }));
         });
 
     }
 
+    handleFilter(e) {
+            const launches = this.state.storeState;
+            const search = e.target.parentElement.children[1].value.toLowerCase()
+
+            const filteredLaunches = launches.filter((launch) =>{
+                let result = launch.mission_name.toLowerCase().includes(search)
+                return result;
+            });
+
+            if(filteredLaunches.length === 0){
+                this.setState(() =>({
+                    errorMessage: "There are no results that match your search"
+                }));
+            } else {
+                this.setState(() =>({
+                    errorMessage: ""
+                }));
+            }
+
+            this.setState(() =>({
+                pastMissions: filteredLaunches,
+                loading: true,
+            }));
+    
+            setTimeout(() =>{
+                this.setState(() =>({
+                    loading: false,
+                }));
+            }, 500);
+    }
+
     handleViewDetails(e) {
-        let element = e.target.parentElement.children[0].innerHTML
+        const element = e.target.parentElement.children[0].innerHTML
         if (this.state.details !== element){
             this.setState(() => ({
                 details: element,
@@ -49,7 +86,7 @@ export default class App extends React.Component{
 
     render(props){
         
-        const jsx = this.state.past.map((launch) => {
+        const jsx = this.state.pastMissions.map((launch) => {
 
             const launchBadge = launch.links.mission_patch_small;
             const launchName = launch.mission_name;
@@ -137,6 +174,8 @@ export default class App extends React.Component{
 
         return(
             <section role="main">
+                <Zoom><SearchBar handleFilter={this.handleFilter} /></Zoom>
+                {this.state.errorMessage ? <p className="error-message">{this.state.errorMessage}</p> : undefined}
                 {this.state.loading 
                 ?
                     <div className="loading_spinner">

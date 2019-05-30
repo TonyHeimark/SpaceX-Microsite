@@ -47,9 +47,9 @@
 }
 
 .newsletter_message--error{
-    color: #B30D29;
+    color: rgb(211, 73, 73);
     font-weight: 900;
-    border-color: #B30D29;
+    border-color: rgb(211, 73, 73);
 }
 
 .newsletter_input--success{
@@ -57,7 +57,7 @@
 }
 
 .newsletter_input--error{
-    border-color: #B30D29;
+    border-color: rgb(211, 73, 73);
 }
 
 .newsletter_button{
