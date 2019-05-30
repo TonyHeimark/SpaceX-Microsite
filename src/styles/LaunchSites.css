@@ -56,6 +56,7 @@
 .launch_site__map{
     width: 100%;
     height: 100%;
+    max-height: 565px;
     -ms-flex-order: 2;
 }
 

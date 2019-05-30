@@ -78,7 +78,7 @@ export default class App extends React.Component{
                             ?
                                 <p className="next_mission__p">{this.state.description}</p>
                             :
-                                <p className="next_mission__p--hidden">{this.state.description}</p>
+                                undefined
                             }
                         </Zoom>
                     </div>
