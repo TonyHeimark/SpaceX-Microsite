@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/Footer.css";
 
 const Footer = () => (
-    <div className="footer">
+    <footer className="footer">
         <div className="footer__inner-block">
             <div className="footer__logo-container">
                 <img className="footer__logo" src={require("../images/spacex_logo_white.png")} alt="SpaceX logo" />
@@ -28,7 +28,7 @@ const Footer = () => (
                 <p className="footer__copyright">&copy; Copyright 2019 SpaceX all rights reserved.</p>
             </div>
         </div>
-    </div>
+    </footer>
 );
 
 export default Footer;

@@ -13,9 +13,9 @@ const LaunchSitePage = () => {
         <div>
             <Hero title="Launch Sites" />
             <LaunchSites />
-            <div className="section2 section2--morePadding">
+            <section className="section2 section2--morePadding">
                 <Newsletter />
-            </div>
+            </section>
         </div>
     );
 }

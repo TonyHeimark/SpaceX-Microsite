@@ -110,7 +110,7 @@ export default class App extends React.Component{
 
             return (
                 <Fade bottom key={launchName}>
-                    <div key={launchName} className="launch_box_container">
+                    <main key={launchName} className="launch_box_container">
                         <div className="launch_box">
                             <h3 className="launch_title">{launchName}</h3>
                             <p className="launch_date">{launchDate}</p>
@@ -135,7 +135,7 @@ export default class App extends React.Component{
                             </Fade>
 
                         </div>
-                    </div>
+                    </main>
                 </Fade>
             )
         })

@@ -113,13 +113,13 @@ export default class App extends React.Component{
 
             return (
                 <Fade bottom key={launchName}>
-                    <div key={launchName} className="launch_box_container">
+                    <main key={launchName} className="launch_box_container">
                         <div className={launchBadge ? "launch_box launch_box--3column" : "launch_box"}>
                             <h3 className="launch_title">{launchName}</h3>
                             <p className="launch_date">{launchDate}</p>
                             <button className="button launch_button" onClick={this.handleViewDetails}>{this.state.details === launchName ? "Hide Details" : "View Details"}</button>
                             {launchVideo ? <a target="_blank" rel="noopener noreferrer" href={launchVideo}><button className="button launch_button">Watch Stream</button></a> : undefined}
-                            {launchBadge ? <img src={launchBadge} alt="Mission patch babge" className="launch_badge" /> : undefined}
+                            {launchBadge ? <img src={launchBadge} alt="Mission patch babge unique to this mission" className="launch_badge" /> : undefined}
 
                             <Fade when={this.state.details === launchName}>
                             {
@@ -132,7 +132,7 @@ export default class App extends React.Component{
                             </Fade>
 
                         </div>
-                    </div>
+                    </main>
                 </Fade>
             )
         })

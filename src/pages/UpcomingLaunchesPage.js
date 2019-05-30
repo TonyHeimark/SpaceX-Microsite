@@ -13,9 +13,9 @@ const UpcomingLaunchesPage = () =>{
         <div>
             <Hero title="Upcoming Launches" />
             <FutureMissions />
-            <div className="section2 section2--morePadding">
+            <section className="section2 section2--morePadding">
                 <Newsletter />
-            </div>
+            </section>
         </div>
     );
 }

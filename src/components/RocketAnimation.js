@@ -8,7 +8,7 @@ import "../styles/RocketAnimation.css";
 
 
 const RocketAnimation = () => (
-  <div>
+  <section>
     <Controller>
       <Scene
         triggerHook="onLeave"
@@ -23,7 +23,7 @@ const RocketAnimation = () => (
                   to={{x: "20%", width: '200px', y: '-230%'}}
               >
               <div className="rocket-container">
-              <img src={falcon9} alt="falcon9 svg" />                
+              <img src={falcon9} alt="falcon9 made in Adobe Illustrator as an svg" />                
               </div>
               </Tween>
             </Timeline>
@@ -33,7 +33,7 @@ const RocketAnimation = () => (
               paused
               target={
                 <div className="fireland-container">
-                <img src={fire} alt="flame svg" />
+                <img src={fire} alt="flame made in Adobe Illustator as an svg" />
                 </div>
               }
             >
@@ -61,7 +61,7 @@ const RocketAnimation = () => (
         )}    
       </Scene>
     </Controller>
-  </div>
+  </section>
 );
 
 export default RocketAnimation;

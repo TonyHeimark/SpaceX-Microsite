@@ -12,12 +12,12 @@ const HomePage = () => {
 
     return (
         <div>
-            <div className="top_section">
+            <section className="top_section">
                 <NextMission />
-            </div>
-            <div className="section1">
+            </section>
+            <section className="section1">
                 <News />
-            </div>
+            </section>
             <RocketAnimation />
         </div>
     );

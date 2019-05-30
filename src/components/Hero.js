@@ -3,9 +3,9 @@ import Zoom from "react-reveal/Zoom";
 import "../styles/Hero.css";
 
 const Hero = (props) => (
-    <div className="hero">
+    <section className="hero">
         <Zoom><h1 className="hero__title">{props.title}</h1></Zoom>
-    </div>
+    </section>
 );
 
 export default Hero;
