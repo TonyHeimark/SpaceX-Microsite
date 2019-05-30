@@ -25,6 +25,7 @@
 .footer__link:hover {
     color: white;
     opacity: 1;
+    -webkit-transition: .3s;
     transition: .3s;
 }
 

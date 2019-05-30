@@ -68,12 +68,14 @@
 .next_mission__p--hidden{
     visibility: hidden;
     opacity: 0;
+    -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
 }
 
 .next_mission__p{
     visibility: visible;
     opacity: 1;
+    -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
 }
 

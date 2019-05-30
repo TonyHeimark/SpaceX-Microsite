@@ -124,15 +124,15 @@ export default class App extends React.Component{
                             }</button>
                             {launchVideo ? <a target="_blank" rel="noopener noreferrer" href={launchVideo}><button className="button launch_button">Watch Stream</button></a> : undefined}
                             
-                            <Fade when={this.state.details === launchName}>
+                            
                             {
                                 this.state.details === launchName
                             ?
-                                missionDetails
+                                <Fade>{missionDetails}</Fade>
                             :
                                 undefined
                             }
-                            </Fade>
+                            
 
                         </div>
                     </div>
