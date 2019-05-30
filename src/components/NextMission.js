@@ -69,8 +69,8 @@ export default class App extends React.Component{
                     <h1 className="next_mission__title">{this.state.missionName}</h1>
                     {launch ? <span className="next_mission__launch">Launch:</span> : undefined}
                     <span className="next_mission__countdown">{launch ? <Countdown date={launch} /> : "Recently Launched"}</span>
-                    {this.state.link ? <a href={this.state.link} target="_blank" rel="noopener noreferrer"><button className="next_mission__button button">Watch Stream</button></a> : undefined}
-                    <button className="next_mission__button button" onClick={this.handleDescription}>{!this.state.buttonClicked ? "Learn more about this mission" : "Close details"}</button>
+                    {this.state.link ? <a href={this.state.link} target="_blank" rel="noopener noreferrer"><button type="button" className="next_mission__button button">Watch Stream</button></a> : undefined}
+                    <button type="button" className="next_mission__button button" onClick={this.handleDescription}>{!this.state.buttonClicked ? "Learn more about this mission" : "Close details"}</button>
                     <div className="next_mission__description">
                         <Zoom when={this.state.buttonClicked}>
                             {

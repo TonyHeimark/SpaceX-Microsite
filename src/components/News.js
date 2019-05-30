@@ -57,7 +57,7 @@ export default class App extends React.Component{
                                 <a className="news_box_link_image" target="_blank" rel="noopener noreferrer" href={this.state.article1}><img className="news_image" src="https://mk0spaceflightnoa02a.kinstacdn.com/wp-content/uploads/2017/03/WVWS_SES-10-9474.jpg" alt="falcon9 rocket launch" /></a>
                                 <h3 className="news_box_title">{this.state.news.title}</h3>
                                 <p className="news_box_details">{this.state.details1}</p>
-                                <a target="_blank" rel="noopener noreferrer" href={this.state.article1}><button className="button news_box_button">Go to article</button></a>
+                                <a target="_blank" rel="noopener noreferrer" href={this.state.article1}><button type="button" className="button news_box_button">Go to article</button></a>
                             </article>
                         </Fade>
 
@@ -66,7 +66,7 @@ export default class App extends React.Component{
                                 <a className="news_box_link_image" target="_blank" rel="noopener noreferrer" href={this.state.article2}><img className="news_image" src="https://mk0spaceflightnoa02a.kinstacdn.com/wp-content/uploads/2018/02/40126461411_a6e49a61f2_k.jpg" alt="falcon heavy rocket launch" /></a>
                                 <h3 className="news_box_title">{this.state.news2.title}</h3>
                                 <p className="news_box_details">{this.state.details2}</p>
-                                <a target="_blank" rel="noopener noreferrer" href={this.state.article2}><button className="button news_box_button">Go to article</button></a>
+                                <a target="_blank" rel="noopener noreferrer" href={this.state.article2}><button type="button" className="button news_box_button">Go to article</button></a>
                             </article>
                         </Fade>
         

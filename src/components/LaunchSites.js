@@ -58,7 +58,7 @@ export default class App extends React.Component{
                                 <span>Details</span>
                                 <p>{site.details}</p>
                             </div>
-                            <a target="_blank" rel="noopener noreferrer" href={site.wikipedia}><button className="button launch_site_box__button">Read more on Wikipedia</button></a>
+                            <a target="_blank" rel="noopener noreferrer" href={site.wikipedia}><button type="button" className="button launch_site_box__button">Read more on Wikipedia</button></a>
                         </div>
                         
                         {this.state.iframeLoading 

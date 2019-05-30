@@ -68,8 +68,8 @@ export default class App extends React.Component{
                     <h2 className="newsletter_title">Subscribe to our Newsletter</h2>
                     <p className="newsletter_paragraph">If you want to stay up to date with our launches and our exciting plans for the future. Sign up now!</p>
                     <span className={this.state.messageClass}>{this.state.validation}</span>
-                    <input onKeyDown={this.handleKeyDown} onInput={this.handleInput} className={this.state.inputClass} type="text" placeholder="JaneDoe@gmail.com" />
-                    <button onClick={this.handleSubmit} className="button newsletter_button">Submit</button>
+                    <input onKeyDown={this.handleKeyDown} onInput={this.handleInput} className={this.state.inputClass} type="email" placeholder="JaneDoe@gmail.com" />
+                    <button type="submit" onClick={this.handleSubmit} className="button newsletter_button">Submit</button>
                 </div>
             </Zoom>
         )

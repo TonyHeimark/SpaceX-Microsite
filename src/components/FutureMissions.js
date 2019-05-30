@@ -114,7 +114,7 @@ export default class App extends React.Component{
                         <div className="launch_box">
                             <h3 className="launch_title">{launchName}</h3>
                             <p className="launch_date">{launchDate}</p>
-                            <button className="button launch_button"
+                            <button type="button" className="button launch_button"
                                     onClick={this.handleViewDetails}
                             >{
                                 this.state.details === launchName
