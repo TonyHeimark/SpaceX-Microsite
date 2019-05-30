@@ -1,6 +1,7 @@
 .launch_site_container{
     max-width: 1200px;
     width: 90%;
+    display:-ms-flexbox;
     display: grid;
     min-height: auto;
     -ms-grid-columns: 1fr 1fr;
@@ -14,6 +15,7 @@
     height: 100%;
     padding-left: 20px;
     background-color: #000;
+    -ms-flex-order: 1;
 }
 
 .launch_site_box__title{
@@ -52,10 +54,11 @@
 }
 
 .launch_site__map{
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
     width: 100%;
     height: 100%;
+    min-height: 470px;
+    max-height: 565px;
+    -ms-flex-order: 2;
 }
 
 /* Media Queries */
@@ -95,6 +98,7 @@
     .launch_site__map{
         width: 100%;
         height: 300px;
+        min-height: 300px;
     }
 
     .launch_site_box__title{
