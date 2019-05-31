@@ -71,17 +71,17 @@ export default class App extends React.Component{
                     <span className="next_mission__countdown">{launch ? <Countdown date={launch} /> : "Recently Launched"}</span>
                     {this.state.link ? <a href={this.state.link} target="_blank" rel="noopener noreferrer"><button type="button" className="next_mission__button button">Watch Stream</button></a> : undefined}
                     <button type="button" className="next_mission__button button" onClick={this.handleDescription}>{!this.state.buttonClicked ? "Learn more about this mission" : "Close details"}</button>
-                    <div className="next_mission__description">
                         <Zoom when={this.state.buttonClicked}>
                             {
                                 this.state.buttonClicked
-                            ?
-                                <p className="next_mission__p">{this.state.description}</p>
+                            ?   
+                                <div className="next_mission__description">
+                                    <p className="next_mission__p">{this.state.description}</p>
+                                </div>
                             :
                                 undefined
                             }
                         </Zoom>
-                    </div>
                 </div>
                 {
                 this.state.badge

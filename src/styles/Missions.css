@@ -1,6 +1,6 @@
 
 .launch_box_container{
-    margin-top: 100px;
+    margin-top: 75px;
 }
 
 .launch_box{
@@ -100,6 +100,7 @@
         width: 90%;
         padding: 10px;
         grid-template-columns: 1fr;
+        margin: 20px auto;
     }
 
     .launch_box--3column{
@@ -109,6 +110,7 @@
     .launch_title{
         grid-row: 1;
         text-align: center;
+        font-size: 2.4rem;
         width: 300px;
         margin: 0 auto;
     }

@@ -40,7 +40,7 @@ a{
 
 .section1{
     height: auto;
-    padding: 100px 0 0;
+    padding: 0;
 }
 
 .section1--morePadding, .section2--morePadding{
@@ -49,7 +49,7 @@ a{
 
 .error-message{
     text-align: center;
-    color: rgb(211, 73, 73);
+    color: rgb(230, 106, 106);
     font-size: 2.4rem;
     margin: 50px auto 500px;
     padding: 0 20px;
