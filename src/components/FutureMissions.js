@@ -20,6 +20,7 @@ export default class App extends React.Component{
 
         this.handleViewDetails = this.handleViewDetails.bind(this)
         this.handleFilter = this.handleFilter.bind(this)
+        this.handleClearSearch = this.handleClearSearch.bind(this)
     }
 
     componentWillMount(){
@@ -50,6 +51,17 @@ export default class App extends React.Component{
             }))
         }
     } 
+
+    handleClearSearch(e) {
+        if(e.target.parentElement.children[1].value.trim() !== ""){
+            e.target.parentElement.children[1].value = "";
+
+            this.setState(() =>({
+                upcoming: this.state.storeState,
+                errorMessage: ""
+            }));
+        }
+    }
 
     
     handleFilter(e) {
@@ -180,7 +192,7 @@ export default class App extends React.Component{
 
         return(
             <section role="main">
-                <Zoom><SearchBar handleFilter={this.handleFilter} /></Zoom>
+                <Zoom><SearchBar handleClearSearch={this.handleClearSearch} handleFilter={this.handleFilter} /></Zoom>
                 {this.state.errorMessage ? <p className="error-message">{this.state.errorMessage}</p> : undefined}
                 {this.state.loading 
                 ?

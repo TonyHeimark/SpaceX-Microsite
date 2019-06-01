@@ -65,7 +65,7 @@
     z-index: 10;
     cursor: pointer;
     border-radius: 4px;
-    background-color: #B30D29;
+    background-color: rgb(173, 64, 64);
 }
   
 .bar1, .bar2, .bar3{
