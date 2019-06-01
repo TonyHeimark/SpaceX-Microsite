@@ -11,17 +11,17 @@ import "../styles/App.css";
 
 const AppRouter = ()=> (
     <BrowserRouter>
-    <div className="App">
-        <Header />
-        <Switch>
-            <Route path="/" component={HomePage} exact={true} />
-            <Route path="/previous-launches" component={PreviousLaunchesPage} />
-            <Route path="/upcoming-launches" component={UpcomingLaunchesPage} />
-            <Route path="/launch-sites" component={LaunchSitePage} />
-            <Route path="/" component={NotFoundPage} exact={false} />
-        </Switch>
-        <Footer/>
-    </div>
+        <div className="App">
+            <Header />
+            <Switch>
+                <Route path="/" component={HomePage} exact={true} />
+                <Route path="/previous-launches" component={PreviousLaunchesPage} />
+                <Route path="/upcoming-launches" component={UpcomingLaunchesPage} />
+                <Route path="/launch-sites" component={LaunchSitePage} />
+                <Route path="/" component={NotFoundPage} exact={false} />
+            </Switch>
+            <Footer/>
+        </div>
     </BrowserRouter>
 );
 

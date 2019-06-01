@@ -42,7 +42,7 @@ export default class App extends React.Component{
 
     handleFilter(e) {
             const launches = this.state.storeState;
-            const search = e.target.parentElement.children[1].value.toLowerCase()
+            const search = e.target.parentElement.children[1].value.toLowerCase().trim()
 
             const filteredLaunches = launches.filter((launch) =>{
                 let result = launch.mission_name.toLowerCase().includes(search)
