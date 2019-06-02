@@ -54,7 +54,7 @@ export default class App extends React.Component{
     render(){
         const newsOne = <Fade left>
                             <article className="news_box">
-                                <a className="news_box_link_image" target="_blank" rel="noopener noreferrer" href={this.state.article1}><img className="news_image" src="https://mk0spaceflightnoa02a.kinstacdn.com/wp-content/uploads/2017/03/WVWS_SES-10-9474.jpg" alt="falcon9 rocket launch" /></a>
+                                <a className="news_box_link_image" target="_blank" rel="noopener noreferrer" href={this.state.article1}><img className="news_image" src="https://www.spacex.com/sites/spacex/files/styles/new_gallery_large/public/first_reflight_-_11_ses10_l-0_-_landing_cam02_-_040117_-_img_968528.jpg?itok=rtEY-It9" alt="falcon9 rocket launch" /></a>
                                 <h3 className="news_box_title">{this.state.news.title}</h3>
                                 <p className="news_box_details">{this.state.details1}</p>
                                 <a target="_blank" rel="noopener noreferrer" href={this.state.article1}><button type="button" className="button news_box_button">Go to article</button></a>

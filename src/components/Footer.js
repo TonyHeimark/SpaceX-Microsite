@@ -25,7 +25,7 @@ const Footer = () => (
                 </i></a>
             </div>
             <div className="footer__copyright-container">
-                <p className="footer__copyright">&copy; Copyright 2019 SpaceX all rights reserved.</p>
+                <p className="footer__copyright">&copy; 2019 SPACE EXPLORATION TECHNOLOGIES CORP.</p>
             </div>
         </div>
     </footer>
