@@ -1,3 +1,7 @@
+This is my Project Exam for the first year at Noroff Oslo
+The task was to create a microsite for either SpaceX or NASA
+Using React.js was not a part of this assignment.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
