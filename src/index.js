@@ -11,6 +11,6 @@ ReactDOM.render(<LoadingScreen />, document.getElementById('root'));
 
 setTimeout(() =>{
     ReactDOM.render(<Fade><AppRouter /></Fade>, document.getElementById('root'));
-}, 4000)
+}, 2500)
 
 
