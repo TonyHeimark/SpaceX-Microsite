@@ -10,7 +10,7 @@ import Fade from "react-reveal/Fade";
 ReactDOM.render(<LoadingScreen />, document.getElementById('root'));
 
 setTimeout(() =>{
-    ReactDOM.render(<Fade><AppRouter /></Fade>, document.getElementById('root'));
+    ReactDOM.render(<AppRouter />, document.getElementById('root'));
 }, 2500)
 
 

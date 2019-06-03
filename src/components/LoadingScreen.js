@@ -37,7 +37,7 @@ class LoadingScreen extends React.Component {
         this.setState({morph: !this.state.morph});
         setInterval(() =>{
             this.setState({morph: !this.state.morph});
-        }, 500)
+        }, 750)
     }
 
     render() {
