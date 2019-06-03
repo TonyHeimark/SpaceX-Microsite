@@ -1,0 +1,8 @@
+.loading_container{
+    background-color: black;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    place-content: center;
+    align-items: center;
+}
