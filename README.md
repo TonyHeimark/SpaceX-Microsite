@@ -1,21 +1,3 @@
-## Project Exam
-This is my Project Exam for the first year at Noroff Oslo.<br>
-The task was to create a microsite for either SpaceX or NASA.<br>
-
-This was a chance for me to really challenge myself and take leaps in my learning. Because I have an Internship coming up during this summer, and the firm is using mainly React.js. I had two choices, I could approach this task with the knowledge we already have in HTML, CSS and JavaScript and come to the internship having no experience with React.js. Or I could jump headfirst into React.js and decide that this project was going to be my React.js experience so id be able to do more and learn even more during my internship. I do like a challenge so let’s see how it went.<br>
-<br>
-The site can be viewed here: https://spacex-microsite.netlify.com/ <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
 ## Available Scripts
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
